@@ -1,0 +1,122 @@
+
+#navigation{
+    padding: 0;
+    margin: 0;
+}
+/************************NAVBAR*****************************/
+.navbar{
+    background: linear-gradient(to right,#F70844,#F83A69);
+}
+.navbar-brand{
+    color: white;
+}
+.navbar-nav a{
+    text-transform: uppercase;
+    color: white;
+}
+
+.nav-item:nth-child(1) .nav-line{
+    content: ' ';
+    position: absolute;
+    width: 7%;
+    height: 5px;
+    background-color: white;
+    z-index: 10;
+}
+/************************NAVBAR*****************************/
+
+/************************SLOGAN*****************************/
+#slogan{
+    background: linear-gradient(to right,#F70844,#F83A69);
+    color: white;
+}
+
+.login-btn,.signup-btn{
+    border-radius: 30px;
+    transition: padding .3s ease-in;
+}
+
+.slogan .btn:hover{
+    color: black;
+}
+.slogan{
+    padding: 200px 0;
+    padding-left: 120px;
+}
+#Info h1{
+    font-weight: 700;
+}
+/************************SLOGAN*****************************/
+
+/************************Modal*****************************/
+.modal-content{
+    width: 75%;
+    margin: auto;
+}
+/************************Modal*****************************/
+
+/************************CARDS*****************************/
+#Cards{
+    padding-top: 50px;
+}
+
+.card{
+    width:20rem;
+    transition: .5s;
+}
+.card h1{
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+.feature-1 .overlay{
+    background: linear-gradient(to right,#F70844,#F83A69);
+}
+
+.feature-2 .overlay{
+    background: linear-gradient(to right,yellow,orange);
+}
+
+.feature-3 .overlay{
+    background: linear-gradient(to right,#F70844,#F83A69);
+}
+
+.card:hover{
+    box-shadow: 3px 3px 30px black;
+    transform: scale(1.1,1.1);
+    transform: translateX(-100px);
+    transition: .5s;
+}
+
+.feature-2:hover{
+    box-shadow: 3px 3px 30px black;
+    transform: scale(1.1,1.1);
+    transform: translateX(100px);
+    transition: .5s;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    transition: .5s;
+}
+
+.overlay h1{
+    padding: 40% 0;
+    transition: .5s;
+    text-shadow: 5px 10px 15px black;
+}
+
+.card:hover .overlay{
+    height: 30%;
+} 
+
+.card:hover .overlay h1{
+    transform: translateY(-130px);
+}
+
+/************************CARDS*****************************/
