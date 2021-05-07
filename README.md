@@ -2,5 +2,8 @@
  DBMS Project
  Chatting application
 ##iterators
-###Naren
-###THARUN
+>>>>>
+Naren
+=======
+THARUN
+<<<<<
