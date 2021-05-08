@@ -22,11 +22,11 @@
   $conn = new mysqli($servername,$username,$password,$db);  // Establising connection with server.
   $sql = "CREATE TABLE STUDENT(
     S_ROLLNO INT PRIMARY KEY,
-    UNAME CHARACTER(50) NOT NULL,
-    SNAME CHARACTER(50) NOT NULL,
-    DEPT CHARACTER(50),
-    IMAGE CHARACTER(50),
-    PASSWORD CHARACTER(100)
+    UNAME VARCHAR(50) NOT NULL,
+    SNAME VARCHAR(50) NOT NULL,
+    DEPT VARCHAR(50),
+    IMAGE VARCHAR(50),
+    PASSWORD VARCHAR(100)
   )";
   if($conn->query($sql) == TRUE)
     echo "STUDENT table created successfully!";
@@ -36,8 +36,8 @@
 
     // Creation of clubs table
     $sql = "CREATE TABLE CLUBS(
-      CLUB_ID INT PRIMARY KEY,
-      CLUB_NAME CHARACTER(60),
+      CLUB_ID INT PRIMARY KEY AUTO_INCREMENT,
+      CLUB_NAME VARCHAR(60),
       U_ID INT,
       FOREIGN KEY(U_ID) REFERENCES STUDENT(S_ROLLNO)
     )";
@@ -49,8 +49,8 @@
 
       // Creation of ACTIVITIES table
           $sql = "CREATE TABLE ACTIVITIES(
-            ACT_ID INT,
-            ACT_NAME CHARACTER(60),
+            ACT_ID INT PRIMARY KEY AUTO_INCREMENT,
+            ACT_NAME VARCHAR(60),
             C_ID INT,
             DATEOFACT DATE,
             FOREIGN KEY(C_ID) REFERENCES CLUBS(CLUB_ID)
@@ -63,10 +63,10 @@
 
   // Creation of CHAT table
             $sql = "CREATE TABLE CHAT(
-              CHAT_ID INT PRIMARY KEY,
+              CHAT_ID INT PRIMARY KEY AUTO_INCREMENT,
               SENDER INT,
               RECIEVER INT,
-              MESSAGE CHARACTER(200),
+              MESSAGE VARCHAR(200),
               READSTATUS INT,
               CHECK (READSTATUS IN (0,1)),
               FOREIGN KEY(SENDER) REFERENCES STUDENT(S_ROLLNO),
@@ -83,8 +83,8 @@
                   SENDER INT,
                   C_ID INT,
                   TIMESTMP TIMESTAMP,
-                  CHAT_ID INT,
-                  MESSAGE CHARACTER(200),
+                  CHAT_ID INT PRIMARY KEY AUTO_INCREMENT,
+                  MESSAGE VARCHAR(200),
                   FOREIGN KEY(SENDER) REFERENCES STUDENT(S_ROLLNO)
                 )";
                 if($conn->query($sql))
