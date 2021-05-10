@@ -1,7 +1,5 @@
-
-#navigation{
-    padding: 0;
-    margin: 0;
+body{
+    overflow-x: hidden;
 }
 /************************NAVBAR*****************************/
 .navbar{
@@ -15,14 +13,6 @@
     color: white;
 }
 
-.nav-item:nth-child(1) .nav-line{
-    content: ' ';
-    position: absolute;
-    width: 7%;
-    height: 5px;
-    background-color: white;
-    z-index: 10;
-}
 /************************NAVBAR*****************************/
 
 /************************SLOGAN*****************************/
@@ -47,13 +37,6 @@
     font-weight: 700;
 }
 /************************SLOGAN*****************************/
-
-/************************Modal*****************************/
-.modal-content{
-    width: 75%;
-    margin: auto;
-}
-/************************Modal*****************************/
 
 /************************CARDS*****************************/
 #Cards{

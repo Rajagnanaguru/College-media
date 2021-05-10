@@ -1,0 +1,27 @@
+body{
+    background: blanchedalmond;
+}
+
+/*****Chat-box header*******/
+
+.chat-header{
+    background: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.header-content{
+    padding: 15px;
+}
+
+
+
+.profile-img img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    filter: grayscale(10);
+}
+
+/*****Chat-box header*******/

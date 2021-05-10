@@ -5,19 +5,28 @@ body{
     background-color: #f0f0f0 ;
 }
 
+
 /*******Form-container********/
 
-.login-form,.signup-form{
+.signup-form{
     width:300px;
     height: 100vh;
-    padding-top:200px;
+    padding-top:50px;
     transition: 1s ease-in-out;
 }
 
-.signup-form{
-    transform: translateX(200%);
+.login-form{
+    width:300px;
+    height: 100vh;
+    padding-top:100px;
+    transition: 1s ease-in-out;
+    transform: translateX(-200%);
 }
 
+
+.error_msg{
+    color:#EA4851;
+}
 /*******Form-container********/
 
 
@@ -31,6 +40,18 @@ body{
     box-shadow: 3px 3px 3px 1px #ccc;
 }
 
+.input-group-text{
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: 3px 3px 3px 1px #ccc;
+}
+.pwd-show-icon img{
+    opacity: .5;
+}
+
+.pwd-show-icon:hover img{
+    opacity: 1;
+}
 /******Input fields******/
 
 
@@ -76,30 +97,29 @@ body{
 
 /*******overlay*******/
 
-.overlay-left,.overlay-right{
+.panel-left,.panel-right{
     padding: 0;
-    content: ' ';
     height: 100vh;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(to right,#F8074B,#fa386f);
     z-index: 10;
     transition: .5s ease-in;
     transition-delay: .5s;
 }
-.overlay-left{
-    transform: translateX(-100%);
-    transition: .5s ease-in;
-}
-.overlay-right{
-    transform: translateX(100%);
+
+.panel-left{
     transition: .5s ease-in;
 }
 
-.panel-container{
-    padding-top: 250px;
+.panel-right{
+    transform: translateX(200%);
+    transition: .5s ease-in;
 }
 
-.panel-container .btn{
+.panel-content .btn{
     border-radius: 70px;
     color: white;
     margin: 5px;
@@ -107,23 +127,14 @@ body{
     transition: padding .3s ease-in;
 }
 
-.panel-container .btn:hover{
+.panel-content .btn:hover{
     padding:10px 50px;
     color: black;
 }
 
-.panel-container{
-    position: absolute;
-    z-index: 10;
-}
-
-.panel-container .panel-left{
-    transform: translateX(-100%);
-    transition: .5s ease-in;
-}
-
-.panel-container .panel-right{
-    transform: translateX(5%);
-    transition: .5s ease-in;
-}
 /*******overlay*******/
+
+
+@media(max-width:768px){
+
+}
