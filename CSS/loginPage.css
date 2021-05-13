@@ -26,6 +26,7 @@ body{
 
 .error_msg{
     color:#EA4851;
+    display: none;
 }
 /*******Form-container********/
 
@@ -135,6 +136,3 @@ body{
 /*******overlay*******/
 
 
-@media(max-width:768px){
-
-}

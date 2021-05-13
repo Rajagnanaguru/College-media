@@ -1,10 +1,12 @@
 body{
     overflow-x: hidden;
 }
-/************************NAVBAR*****************************/
-.navbar{
-    background: linear-gradient(to right,#F70844,#F83A69);
+.nav-w-slogan{
+    background-image: url("../assets/Images/homePage-theme.png");
+    background-size: cover;
 }
+/************************NAVBAR*****************************/
+
 .navbar-brand{
     color: white;
 }
@@ -17,7 +19,6 @@ body{
 
 /************************SLOGAN*****************************/
 #slogan{
-    background: linear-gradient(to right,#F70844,#F83A69);
     color: white;
 }
 

@@ -37,10 +37,11 @@
                 <!----------------Login--------------------->
                 <div class="form-container col-sm-6 login-container">
                     <div class="login-form m-auto align-items-center" id="login-form">
-                        <form onsubmit="return false;">
+                        <form id="login" onsubmit="return false;">
                             <div class="login-logo mb-4 text-center">
                                 <img src="../assets/Images/login-logo.png" width="40%">
                             </div>
+                            <div class="error_msg text-center mb-3">Error message</div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-white">
                                     <img src="../assets/bootstrap-icons-1.4.1/person-fill.svg">
@@ -75,7 +76,7 @@
                 <!----------------signup--------------------->
                 <div class="form-container col-sm-6 signup-container">
                     <div class="signup-form m-auto" id="signup-form">
-                        <form onsubmit="return false;">
+                        <form id="signup" onsubmit="return false;">
                             <div class="signup-logo mb-3 text-center">
                                 <img src="../assets/Images/signup-logo.png" width="40%">
                             </div>
@@ -103,7 +104,7 @@
                                 <span class="input-group-text bg-white">
                                     <img src="../assets/bootstrap-icons-1.4.1/lock-fill.svg">
                                 </span>
-                                <input type="password" name="password" class="form-control input_pass" placeholder="Confirm password">
+                                <input type="password" name="conf_password" class="form-control input_pass" placeholder="Confirm password">
                                 <!---------------------paswword-eye-icon---------------------------->
 
                                 <button class="input-group-text bg-white pwd-show-icon" style="z-index: 10;">
@@ -146,6 +147,7 @@
 
         <script type="text/javascript" src="../JS/login-panel-toggle.js">           
         </script>
-        <script type="text/javascript" src="../JS/password-show-hide.js"></script>         
+        <script type="text/javascript" src="../JS/password-show-hide.js"></script>       
+        <script type="text/javascript" src="../JS/signup.js"></script>    
     </body>
 </html>
