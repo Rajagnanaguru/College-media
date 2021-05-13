@@ -5,6 +5,6 @@
 ## Chatting application
 
 ### Iterators
-### Narendira Kumar
-### Gangaraju Tharun
-### Rajagnanaguru
+### Naren
+### THARUN
+
