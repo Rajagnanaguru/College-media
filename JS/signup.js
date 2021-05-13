@@ -6,7 +6,7 @@ $(document).ready(function(){
         let xhr = new XMLHttpRequest();
         xhr.open("POST","../backend/signup.php",true);
         xhr.onload = () => {
-            if(xhr.readystate == 4 && xhr.status == 200){
+            if(xhr.readyState == 4 && xhr.status == 200){
                 let data = xhr.response;
                 if(data === "success"){
                     location.href("index.html");
