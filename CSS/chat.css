@@ -1,0 +1,124 @@
+body{
+    background: blanchedalmond;
+}
+
+.chat-ui{
+    height: 100vh;
+}
+/*****friends list header*******/
+
+.logo-header{
+    background: #00FFBF;
+    padding: 15px;
+    height: 75px;
+    background-image: url("../assets/Images/Chat-stuff-themes/chat-header-theme.jpg");
+}
+
+.search-bar{
+    padding-top: 30px;
+    background: rgba(0,0,0,.2);
+}
+
+.form-control{
+    border-radius: 50px;
+    border:none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.input-group-text{
+    border: none;
+    border-radius: 50px;
+}
+/*****friends list header*******/
+
+
+/******friends-list*****/
+
+.friends-list{
+    background: white;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.friends-list::-webkit-scrollbar{
+    width: 0;
+}
+.frnd{  
+    border-bottom: 1px rgba(0,0,0,.1) solid;
+    background: rgba(0,0,0,.1);
+}
+
+/******friends-list*****/
+
+
+/*******Chat-box*******/
+
+.chat-box{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-image: url("../assets/Images/Chat-stuff-themes/chat-theme.jpg");
+}
+
+.chat-box::-webkit-scrollbar{
+    width: 0;
+}
+
+.outgoing-msg .msg-text{
+    margin: 5px 10px 5px 0;
+    margin-left: auto;
+    border-radius: 10px;
+    background-image: url("../assets/Images/Chat-stuff-themes/outgoing-msg-theme.jpg");
+    background-size: cover;
+}
+
+.incoming-msg .msg-text{
+    margin: 5px 0 5px 10px;
+    margin-right: auto;
+    border-radius: 10px;
+    background-image: url("../assets/Images/Chat-stuff-themes/incoming-msg-theme.jpg");
+    background-size: cover;
+    opacity: .9;
+}
+
+.msg-text{
+    padding: 10px;
+    max-width: 300px;
+}
+/*******Chat-box*******/
+
+
+/*******Chat-box header*******/
+
+.chat-box-header{
+    display: flex;
+    align-items: center;
+    background: #FF0040;
+    height: 75px;
+    background-image: url("../assets/Images/Chat-stuff-themes/chat-header-theme.jpg");
+}
+
+
+.profile-img img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/*******Chat-box header*******/
+
+/**********text box***********/
+
+.text-bar{
+    width: inherit;
+    position: fixed;
+    bottom: 5px;
+}
+.text-bar input{
+    margin-left: 8px;
+}
+
+.text-bar span{
+    margin-right: 8px;
+}
+/**********text box***********/

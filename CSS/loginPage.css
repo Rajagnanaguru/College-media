@@ -26,6 +26,7 @@ body{
 
 .error_msg{
     color:#EA4851;
+    display: none;
 }
 /*******Form-container********/
 
@@ -41,18 +42,16 @@ body{
 }
 
 .input-group-text{
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    /*border-radius: 50px*/
+    border-radius: 50px;
     border-style: none;
     box-shadow: 3px 3px 3px 1px #ccc;
 }
-.signup-container .input-group-text:nth-child(3) , .input-group-text:nth-child(5){
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+.pwd-show-icon img{
+    opacity: .5;
+}
 
+.pwd-show-icon:hover img{
+    opacity: 1;
 }
 /******Input fields******/
 
@@ -121,10 +120,6 @@ body{
     transition: .5s ease-in;
 }
 
-.panel-content{
-  margin: auto;
-}
-
 .panel-content .btn{
     border-radius: 70px;
     color: white;
@@ -141,6 +136,3 @@ body{
 /*******overlay*******/
 
 
-@media(max-width:768px){
-
-}
