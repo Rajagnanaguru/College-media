@@ -10,10 +10,17 @@ $(document).ready(function(){
                 let data = xhr.response;
                 if(data === "success"){
                     location.href = "index.html";
+
+            if(xhr.readystate == 4 && xhr.status == 200){
+                let data = xhr.response;
+                if(data === "success"){
+                    location.href("index.html");
                 }
                 else{
                     error_msg.html(xhr.response);
                     error_msg.css("display","block");
+                }
+            }
                 }
             }
         }
