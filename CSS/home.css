@@ -1,8 +1,15 @@
 body{
     overflow-x: hidden;
+    box-sizing: border-box;
 }
+
+body::-webkit-scrollbar{
+    width: 0;
+}
+
 .nav-w-slogan{
-    background-image: url("../assets/Images/homePage-theme.png");
+    height: 100vh;
+    background-image: url("../assets/Images/Chat-stuff-themes/homePage-theme.jpg");
     background-size: cover;
 }
 /************************NAVBAR*****************************/

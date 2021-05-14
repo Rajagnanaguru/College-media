@@ -21,8 +21,8 @@
   $db = "COLLEGE_MEDIA";
   $conn = new mysqli($servername,$username,$password,$db);  // Establising connection with server.
   $sql = "CREATE TABLE STUDENT(
-    S_ROLLNO INT NOT NULL,
-    UNAME VARCHAR(50) PRIMARY KEY,
+    S_ROLLNO INT PRIMARY KEY,
+    UNAME VARCHAR(50) NOT NULL,
     SNAME VARCHAR(50) NOT NULL,
     DEPT VARCHAR(50),
     IMAGE VARCHAR(50),

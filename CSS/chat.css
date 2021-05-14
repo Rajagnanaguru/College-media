@@ -14,6 +14,10 @@ body{
     background-image: url("../assets/Images/Chat-stuff-themes/chat-header-theme.jpg");
 }
 
+.logout .btn{
+    background-color: blanchedalmond;
+}
+
 .search-bar{
     padding-top: 30px;
     background: rgba(0,0,0,.2);
@@ -34,13 +38,13 @@ body{
 
 /******friends-list*****/
 
-.friends-list{
+.friends-list-ui{
     background: white;
     height: 100vh;
     overflow-y: scroll;
 }
 
-.friends-list::-webkit-scrollbar{
+.friends-list-ui::-webkit-scrollbar{
     width: 0;
 }
 .frnd{  
