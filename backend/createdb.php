@@ -21,12 +21,13 @@
   $db = "COLLEGE_MEDIA";
   $conn = new mysqli($servername,$username,$password,$db);  // Establising connection with server.
   $sql = "CREATE TABLE STUDENT(
-    S_ROLLNO INT NOT NULL,
-    UNAME VARCHAR(50) PRIMARY KEY,
+    S_ROLLNO INT,
+    UNAME VARCHAR(50) NOT NULL PRIMARY KEY,
     SNAME VARCHAR(50) NOT NULL,
     DEPT VARCHAR(50),
     IMAGE VARCHAR(50),
-    PASSWORD VARCHAR(100)
+    PASSWORD VARCHAR(100),
+    STATUS VARCHAR(20)
   )";
   if($conn->query($sql) == TRUE)
     echo "STUDENT table created successfully!";
