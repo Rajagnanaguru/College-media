@@ -47,6 +47,7 @@ body{
 .friends-list-ui::-webkit-scrollbar{
     width: 0;
 }
+
 .frnd{  
     border-bottom: 1px rgba(0,0,0,.1) solid;
     background: rgba(0,0,0,.1);
@@ -54,6 +55,13 @@ body{
 
 /******friends-list*****/
 
+/*****other users list*****/
+
+.request .btn{
+    background-color: blanchedalmond;
+}
+
+/*****other users list*****/
 
 /*******Chat-box*******/
 

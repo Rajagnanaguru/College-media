@@ -1,3 +1,10 @@
+<?php
+   session_start();
+   include_once"../backend/config.php";
+   $sql1 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME = '{$_SESSION["Id"]}'");
+   $res = mysqli_fetch_assoc($sql1);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,6 +54,9 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn">Logout</a>
                   </li>
                 </ul>
               </div>
