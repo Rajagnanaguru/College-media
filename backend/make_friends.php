@@ -6,23 +6,31 @@
     $btnValue = mysqli_real_escape_string($conn,$_GET['btnValue']);
 
     if($btnValue == "Request"){
-        //$is_friends = 'no';
-        $sql1 = mysqli_query($conn,"INSERT INTO FRIEND_REQUEST(ACCEPTING_ID,REQUESTING_ID) VALUES('{$friend_id}','{$_SESSION['Id']}')");
-        if($sql1){
-            echo "Requested";
+        $sql1 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$friend_id}' AND ACCEPTING_ID = '{$_SESSION['Id']}'"); 
+        $sql2 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE (REQUESTING_ID = '{$_SESSION['Id']}' AND ACCEPTING_ID = '{$friend_id}')");
+        if(mysqli_num_rows($sql1)>0){
+            mysqli_query($conn,"UPDATE FRIEND_REQUEST SET FRIENDS = 1 WHERE REQUESTING_ID = '{$friend_id}' AND ACCEPTING_ID = '{$_SESSION['Id']}'");
         }
+        else if(mysqli_num_rows($sql2)>0){
+            mysqli_query($conn,"UPDATE FRIEND_REQUEST SET FRIENDS = 1 WHERE (REQUESTING_ID = '{$_SESSION['Id']}' AND ACCEPTING_ID = '{$friend_id}')");
+        }
+        else{
+            mysqli_query($conn,"INSERT INTO FRIEND_REQUEST(ACCEPTING_ID,REQUESTING_ID,FRIENDS) VALUES('{$friend_id}','{$_SESSION['Id']}',1)");
+        }
+        echo "Requested";
+        //echo mysqli_error($conn);
+    }
+    else if($btnValue == "Reject"){
+        $sql3 = mysqli_query($conn,"UPDATE FRIEND_REQUEST SET FRIENDS = 3 WHERE REQUESTING_ID = '{$friend_id}' AND ACCEPTING_ID = '{$_SESSION['Id']}'");
+        if($sql3)
+            echo "Rejected";
         else{
             echo mysqli_error($conn);
         }
     }
-    else if($btnValue = "Reject"){
-        
-    }
     else{
-        $sql2 = mysqli_query($conn,"UPDATE FRIEND_REQUEST SET IS_FRIENDS = 'yes' WHERE REQUESTING_ID = '{$friend_id}' AND ACCEPTING_ID = '{$_SESSION['Id']}'");
-        $sql3 = mysqli_query($conn,"INSERT INTO FRIENDS(STUDENT_ID,FRIEND_ID) VALUES('{$friend_id}','{$_SESSION['Id']}')");
-        $sql4 = mysqli_query($conn,"INSERT INTO FRIENDS(STUDENT_ID,FRIEND_ID) VALUES('{$_SESSION['Id']}','{$friend_id}')");
-        if($sql2)
+        $sql4 = mysqli_query($conn,"UPDATE FRIEND_REQUEST SET FRIENDS = 2 WHERE REQUESTING_ID = '{$friend_id}' AND ACCEPTING_ID = '{$_SESSION['Id']}'");
+        if($sql4)
             echo "Accepted";
         else{
             echo mysqli_error($conn);
