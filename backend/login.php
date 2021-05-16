@@ -4,7 +4,7 @@
     $uname = mysqli_real_escape_string($conn,$_POST['username']);
     $pwd = mysqli_real_escape_string($conn,$_POST['password']);
     $status = "Online";
-    $_SESSION['count'] = 0; 
+    
     //Checking whether all input fields are filled or not
     if(!empty($uname) && !empty($pwd)){
         
@@ -12,11 +12,12 @@
 
             //checking whether the user exists
             if(mysqli_num_rows($sql)>0){
+                //updating the online status of the user
                 $sql1 = mysqli_query($conn,"UPDATE STUDENT SET STATUS = '{$status}' WHERE UNAME = '{$uname}' AND PASSWORD = '{$pwd}'");
                 if($sql1){
                     $res = mysqli_fetch_assoc($sql);
-                    $_SESSION['count']+=1;
-                    $_SESSION['Id'.$_SESSION['count']] = $res['UNAME'];
+                    //setting the username as session id 
+                    $_SESSION['Id'] = $res['UNAME'];
                     echo "Success";
                 }
             }

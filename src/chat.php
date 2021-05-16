@@ -1,7 +1,7 @@
 <?php 
   session_start();
   include_once "../backend/config.php";
-  if(!isset($_SESSION['Id'.$_SESSION['count']])){
+  if(!isset($_SESSION['Id'])){
     header("location: loginPage.php");
   }
 ?>
@@ -30,8 +30,7 @@
                             <div class="logo-header d-flex">
                                 <span class="text-white col-sm-10">
                                 <?php 
-                                    include_once "../backend/config.php";
-                                    $sql1 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME = '{$_SESSION["Id".$_SESSION['count']]}'");
+                                    $sql1 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME = '{$_SESSION["Id"]}'");
                                     $res = mysqli_fetch_assoc($sql1);
                                     $uname = $res['UNAME'];
                                     $status = $res['STATUS'];
@@ -39,7 +38,7 @@
                                 ?>
                                 </span>
                                 <div class="logout col-sm-2">
-                                    <a href="../backend/logout.php?logout_id=<?php echo $_SESSION['Id'.$_SESSION['count']]; ?>" class="btn logout-btn">Logout</a>
+                                    <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn">Logout</a>
                                 </div>
                             </div>
                             <!---------------------friends list search bar--------------------------------->
@@ -55,20 +54,16 @@
                         <!---------------------friends list ui--------------------------------->
                         
                         <div class="friends-list">
-                            <?php
-                                include_once "../backend/config.php";
-                                $sql = mysqli_query($conn,"SELECT * FROM STUDENT WHERE NOT UNAME = '{$_SESSION["Id".$_SESSION['count']]}'");
-                                while($row = mysqli_fetch_assoc($sql)){
-                                echo '<div class="frnd p-3">
-                                <span class="frnd-profile-pic">
-                                    <img src="../assets/Images/login-logo.png" width="10%">
-                                </span>
-                                <span class="align-items-center px-2">'.$row['UNAME'].'</span>
-                                </div>';
-                                }
-                            ?>
                         </div>
+
                         <!---------------------friends list ui--------------------------------->
+
+                        <!---------------------other users list ui--------------------------------->     
+
+                        <div class="other-users-list">
+                        </div>          
+
+                        <!---------------------other users list ui--------------------------------->          
 
                 </div>
 
@@ -107,8 +102,8 @@
                 <!---------------------right-side chat ui--------------------------------->
             </div>
         </div>
-        <script type="text/javascript">
-        
-        </script>
+        <script type="text/javascript" src="../JS/friends.js"></script>
+        <script type="text/javascript" src="../JS/others.js"></script>
+        <script type="text/javascript" src="../JS/make_friends.js"></script>
     </body>
 </html>
