@@ -20,7 +20,7 @@
 
   $db = "COLLEGE_MEDIA";
   $conn = new mysqli($servername,$username,$password,$db);  // Establising connection with server.
-  $sql = "CREATE TABLE STUDENT(
+  /*$sql = "CREATE TABLE STUDENT(
     S_ROLLNO INT,
     UNAME VARCHAR(50) NOT NULL PRIMARY KEY,
     SNAME VARCHAR(50) NOT NULL,
@@ -32,7 +32,7 @@
   if($conn->query($sql) == TRUE)
     echo "STUDENT table created successfully!";
   else
-    die("Error in STUDENT table creation".$conn->error);
+    die("Error in STUDENT table creation".$conn->error);*/
 
 
     // Creation of clubs table
@@ -66,12 +66,12 @@
             $sql = "CREATE TABLE CHAT(
               CHAT_ID INT PRIMARY KEY AUTO_INCREMENT,
               SENDER VARCHAR(50),
-              RECIEVER VARCHAR(50),
+              RECEIVER VARCHAR(50),
               MESSAGE VARCHAR(200),
               READSTATUS INT,
               CHECK (READSTATUS IN (0,1)),
               FOREIGN KEY(SENDER) REFERENCES STUDENT(UNAME),
-              FOREIGN KEY(RECIEVER) REFERENCES STUDENT(UNAME)
+              FOREIGN KEY(RECEIVER) REFERENCES STUDENT(UNAME)
             )";
             if($conn->query($sql))
               echo "CHAT table created successfully!";
@@ -93,7 +93,7 @@
                 else
                   die("Error in GROUPCHAT table creation".$conn->error);
 
-                  $sql = "CREATE TABLE FRIEND_REQUEST(
+                 /* $sql = "CREATE TABLE FRIEND_REQUEST(
                     ID INT PRIMARY KEY AUTO_INCREMENT,
                     ACCEPTING_ID VARCHAR(50),
                     REQUESTING_ID VARCHAR(50),
@@ -104,7 +104,7 @@
                   if($conn->query($sql))
                     echo "GROUPCHAT table created successfully!";
                   else
-                    die("Error in GROUPCHAT table creation".$conn->error);
+                    die("Error in GROUPCHAT table creation".$conn->error);*/
   
   $conn->close(); //Closing connection to server
 ?>

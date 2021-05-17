@@ -3,10 +3,9 @@
     include_once "../backend/config.php";
     $sql = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE ACCEPTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 2");
     $sql1 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 2");
-    if(!$sql)
-        echo mysqli_error($conn);
+  
     if(mysqli_num_rows($sql)>0 || mysqli_num_rows($sql1)>0){
-        $output = '<span class="text m-2">Friends</span>';
+        $output = '<span class="text text-uppercase m-4">Friends</span>';
         while($row = mysqli_fetch_assoc($sql)){
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
