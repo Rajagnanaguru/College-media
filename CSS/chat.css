@@ -11,11 +11,13 @@ body{
     background: #00FFBF;
     padding: 15px;
     height: 75px;
-    background-image: url("../assets/Images/Chat-stuff-themes/chat-header-theme.jpg");
+    background: linear-gradient(to top right,#804f,#55185d );
 }
 
 .logout .btn{
-    background-color: blanchedalmond;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px white;
 }
 
 .search-bar{
@@ -23,25 +25,25 @@ body{
     background: rgba(0,0,0,.2);
 }
 
-.form-control{
+.search-bar .form-control,.input-group-text{
     border-radius: 50px;
     border:none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ffffff;
 }
 
-.input-group-text{
-    border: none;
-    border-radius: 50px;
-}
+
+
 /*****friends list header*******/
 
 
 /******friends-list*****/
 
 .friends-list-ui{
-    background: white;
+    background: linear-gradient(to top right, #804f,#6a359c);
     height: 100vh;
     overflow-y: scroll;
+    color: white;
 }
 
 .friends-list-ui::-webkit-scrollbar{
@@ -50,7 +52,6 @@ body{
 
 .frnd{  
     border-bottom: 1px rgba(0,0,0,.1) solid;
-    background: rgba(0,0,0,.1);
 }
 
 /******friends-list*****/
@@ -58,7 +59,11 @@ body{
 /*****other users list*****/
 
 .request .btn{
-    background-color: blanchedalmond;
+    border-radius: 50px;
+    background: url("..//assets/Images/Chat-stuff-themes/incoming-msg-theme.jpg");
+    background-size: cover;
+    color: whitesmoke;
+    transition: all .5s;
 }
 
 /*****other users list*****/
@@ -69,28 +74,36 @@ body{
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-image: url("../assets/Images/Chat-stuff-themes/chat-theme.jpg");
+    background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-02.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .chat-box::-webkit-scrollbar{
     width: 0;
 }
 
+.initial-info{
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    padding: 50% 0;
+}
 .outgoing-msg .msg-text{
     margin: 5px 10px 5px 0;
     margin-left: auto;
-    border-radius: 10px;
-    background-image: url("../assets/Images/Chat-stuff-themes/outgoing-msg-theme.jpg");
-    background-size: cover;
+    border-radius: 5px 20px 5px 20px;
+    background: linear-gradient(to bottom right, orange, #55185d);
+    color: whitesmoke;
 }
 
 .incoming-msg .msg-text{
     margin: 5px 0 5px 10px;
     margin-right: auto;
-    border-radius: 10px;
-    background-image: url("../assets/Images/Chat-stuff-themes/incoming-msg-theme.jpg");
-    background-size: cover;
-    opacity: .9;
+    border-radius: 5px 20px 5px 20px;
+    background: linear-gradient(to top right, #804f,#6a359c);
+    color: whitesmoke;
 }
 
 .msg-text{
@@ -103,18 +116,23 @@ body{
 /*******Chat-box header*******/
 
 .chat-box-header{
-    display: flex;
     align-items: center;
     background: #FF0040;
     height: 75px;
-    background-image: url("../assets/Images/Chat-stuff-themes/chat-header-theme.jpg");
+    background: linear-gradient(to top right,#804f,#55185d );
 }
 
 
 .profile-img img{
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
+}
+
+.unfollow-btn .btn{
+    background: none;
+    border-radius: 50px;
+    color: white;
 }
 
 /*******Chat-box header*******/
@@ -127,10 +145,14 @@ body{
     bottom: 5px;
 }
 .text-bar input{
+    border: none;
+    border-radius: 50px;
     margin-left: 8px;
 }
 
 .text-bar span{
+    border-radius: 50px;
     margin-right: 8px;
 }
+
 /**********text box***********/

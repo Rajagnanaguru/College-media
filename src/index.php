@@ -1,8 +1,10 @@
 <?php
    session_start();
-   include_once"../backend/config.php";
-   $sql1 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME = '{$_SESSION["Id"]}'");
-   $res = mysqli_fetch_assoc($sql1);
+   include_once "../backend/config.php";
+   if(isset($_SESSION['Id'])){
+    $sql1 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME = '{$_SESSION["Id"]}'");
+    $res = mysqli_fetch_assoc($sql1);
+   }
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +14,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="../assets/css/all.min.css">
         <link rel="stylesheet" href="../CSS/home.css">
         <script type="text/javascript" src="../assets/js/bootstrap.min.js"crossorigin="anonymous"></script>
         <script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"crossorigin="anonymous"></script>
