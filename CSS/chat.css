@@ -84,6 +84,7 @@ body{
 
 .chat-box{
     height: 100vh;
+    overflow-x: hidden;
     overflow-y: scroll;
     background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-02.jpg");
     background-size: cover;
@@ -93,6 +94,7 @@ body{
 .chat-box::-webkit-scrollbar{
     width: 0;
 }
+
 
 .initial-info{
     color: white;
@@ -137,8 +139,8 @@ body{
 
 
 .profile-img img{
-    width: 55px;
-    height: 55px;
+    width: 60%;
+    height: 80%;
     border-radius: 50%;
 }
 
