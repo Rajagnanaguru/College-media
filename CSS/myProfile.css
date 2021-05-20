@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 60% 40%;
+}
+
+.profile-container,.friends-list-container{
+    border: 1px black solid;
+}

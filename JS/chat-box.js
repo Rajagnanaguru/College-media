@@ -20,10 +20,10 @@ $(document).ready(function(){
     });
 
 //sending the user typed message to php
-$(".chat-box").on('click',".text-bar .input-group-text",function(){
-    var msg = $(".text-bar input");
-    var receiver_id = $(".chat-box .sender-name").text();
-    //console.log(receiver_id);
+$(".chat-box").on('click',".text-bar .msg-send-icon",function(){
+    var msg = $(".text-bar textarea");
+    var receiver_id = $(".chat-box .sender-name .user_id").text();
+    console.log(receiver_id);
     let xhr = new XMLHttpRequest(); 
     xhr.open("POST", "../backend/insert-msg.php", true);
     xhr.onload = ()=>{
@@ -43,8 +43,8 @@ $(".chat-box").on('click',".text-bar .input-group-text",function(){
 //getting the chats dynamically
 setInterval(()=>{
     const chat = $(".chat-box").find(".chats");
-    var receiver_id = $(".chat-box").find(".sender-name").text();
-    console.log(receiver_id);
+    var receiver_id = $(".chat-box").find(".user_id").text();
+    //console.log(receiver_id);
     let xhr = new XMLHttpRequest(); 
     xhr.open("POST", "../backend/display-msg.php", true);
     xhr.onload = ()=>{

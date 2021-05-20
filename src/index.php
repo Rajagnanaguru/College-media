@@ -17,8 +17,8 @@
         <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
         <link rel="stylesheet" href="../assets/css/all.min.css">
         <link rel="stylesheet" href="../CSS/home.css">
-        <script type="text/javascript" src="../assets/js/bootstrap.min.js"crossorigin="anonymous"></script>
         <script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../assets/js/bootstrap.min.js"crossorigin="anonymous"></script>       
     </head>
     <body>
       <div class="nav-w-slogan">
@@ -26,28 +26,25 @@
         <section id="navigation">
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">CHAT</a>
+              <a class="navbar-brand" href="index.php">CHAT</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <div class="nav-line"></div>
                     <a class="nav-link" href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="chat.php">My friends</a>
+                    <a class="nav-link" href="#">clubs</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Events
                     </a>
                     <div class="dropdown-menu" aria-labelledby="#navbarDropdown">
-                      <a class="dropdown-item" href="#">Kuruskshetra</a>
-                      <a class="dropdown-item" href="#">Techofes</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item text-dark" href="#">Kuruskshetra</a>
+                      <a class="dropdown-item text-dark" href="#">Techofes</a>
                     </div>
                   </li>
                   <li class="nav-item">
@@ -59,9 +56,13 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">About us</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn">Logout</a>
-                  </li>
+                  <?php
+                    if(isset($_SESSION['Id'])){
+                      echo '<li class="nav-item">
+                      <a href="../backend/logout.php?logout_id='.$res['UNAME'].'" class="btn logout-btn">Logout</a>
+                    </li>';
+                    }
+                  ?>
                 </ul>
               </div>
             </div>
@@ -71,17 +72,17 @@
 
 
         <!---------------Slogan----------------->
-        <section id="slogan">
+        <section class="slogan d-flex justify-content-center align-items-center">
           <div class="container-fluid">
-            <div class="row">
-              <div class="slogan col-md-6 col-sm-12">
-                <h1 class="col-sm-12">CONNECT-G</h1>
-                <button class="btn login-btn btn-outline-light bg-transaparent px-4 text-center">Login</button>
-                <button class="btn signup-btn btn-outline-light bg-transaparent px-4 mx-2 text-center">Signup</button>
+              <div class="logo-name text-center">
+                <h1>CONNECT-G</h1>
               </div>
-              <div class="col-md-6">
-              </div>
-            </div>
+              <?php
+                  if(!isset($_SESSION['Id'])){
+                  echo '<div class="log-sign-btns text-center"><button class="btn login-btn bg-transaparent text-dark px-4 text-center">Login</button>
+                  <button class="btn signup-btn bg-transaparent text-dark px-4 mx-2 text-center">Signup</button></div>';
+                  }
+                ?>
           </div>
         </section>
         <!---------------Slogan----------------->
