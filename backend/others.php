@@ -13,23 +13,23 @@
                         <img src="../assets/Images/login-logo.png" width="90%">
                     </span>';
             if(mysqli_num_rows($sql1)>0){
-            $output .= '<span class="col-sm-5 info px-0">'.$row['UNAME'].'</span>
-                    <div class="request col-sm-5 text-center">
+            $output .= '<span class="col-sm-4 info px-0">'.$row['UNAME'].'</span>
+                    <div class="request col-sm-6 d-flex justify-content-end">
                         <button class="btn request-btn">Accept</button>
-                        <button class="btn request-btn">Reject</button>
+                        <button class="btn request-btn mx-2">Reject</button>
                     </div>
                 </div>';
             }
             else if(mysqli_num_rows($sql2)>0){
-                $output .= '<span class="col-sm-7 info px-0">'.$row['UNAME'].'</span>
-                <div class="request col-sm-3">
+                $output .= '<span class="col-sm-4 info px-0">'.$row['UNAME'].'</span>
+                <div class="request col-sm-6 d-flex justify-content-end">
                     <button class="btn request-btn">Requested</button>
                 </div>
             </div>'; 
             }
             else{
-                $output .= '<span class="col-sm-7 info px-0">'.$row['UNAME'].'</span>
-                    <div class="request col-sm-3">
+                $output .= '<span class="col-sm-4 info px-0">'.$row['UNAME'].'</span>
+                    <div class="request col-sm-6 d-flex justify-content-end">
                         <button class="btn request-btn">Request</button>
                     </div>
                 </div>';

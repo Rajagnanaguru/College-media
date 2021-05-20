@@ -10,37 +10,35 @@ body::-webkit-scrollbar{
 .nav-w-slogan{
     height: 100vh;
     background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-01.jpg");
+    color: black!important;
     background-size: cover;
 }
 /************************NAVBAR*****************************/
 
-.navbar-brand{
-    color: white;
-}
 .navbar-nav a{
     text-transform: uppercase;
-    color: white;
+    color: black;
 }
 
 /************************NAVBAR*****************************/
 
 /************************SLOGAN*****************************/
-#slogan{
-    color: white;
-}
 
 .login-btn,.signup-btn{
     border-radius: 30px;
-    transition: padding .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.slogan{
+    height: inherit;
 }
 
 .slogan .btn:hover{
-    color: black;
+    background-color: white;
+    border-color: white;
+    letter-spacing: 2px;
 }
-.slogan{
-    padding: 200px 0;
-    padding-left: 120px;
-}
+
 #Info h1{
     font-weight: 700;
 }

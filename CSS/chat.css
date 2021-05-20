@@ -14,6 +14,18 @@ body{
     background: linear-gradient(to top right,#804f,#55185d );
 }
 
+.back-btn{
+    flex: 10%;
+}
+
+.logo{
+    flex: 70%;
+}
+
+.logout{
+    flex: 20%;
+}
+
 .logout .btn{
     background-color: white;
     border-radius: 50px;
@@ -59,9 +71,9 @@ body{
 /*****other users list*****/
 
 .request .btn{
+    border: none;
     border-radius: 50px;
-    background: url("..//assets/Images/Chat-stuff-themes/incoming-msg-theme.jpg");
-    background-size: cover;
+    background: linear-gradient(to bottom right,orangered,orange);
     color: whitesmoke;
     transition: all .5s;
 }
@@ -72,7 +84,6 @@ body{
 
 .chat-box{
     height: 100vh;
-    overflow-x: hidden;
     overflow-y: scroll;
     background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-02.jpg");
     background-size: cover;
@@ -86,9 +97,11 @@ body{
 .initial-info{
     color: white;
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    padding: 50% 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,.5);
+}
+
+.chats{
+    margin-bottom: 50px;
 }
 .outgoing-msg .msg-text{
     margin: 5px 10px 5px 0;
@@ -129,6 +142,14 @@ body{
     border-radius: 50%;
 }
 
+.sender-name .user_id{
+    font-size: 20px;
+}
+
+.sender-name .online-status{
+    font-size: 15px;
+}
+
 .unfollow-btn .btn{
     background: none;
     border-radius: 50px;
@@ -140,19 +161,34 @@ body{
 /**********text box***********/
 
 .text-bar{
-    width: inherit;
     position: fixed;
+    width: inherit;
+    padding : 3px 8px;
     bottom: 5px;
+    column-gap: 1%;
 }
-.text-bar input{
+.text-bar textarea{
     border: none;
-    border-radius: 50px;
-    margin-left: 8px;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    height: 40px;
+    max-height: 70px;
+    flex: 90%;
+    box-shadow: 1px 2px 7px rgba(0,0,0,.5);
 }
 
-.text-bar span{
-    border-radius: 50px;
-    margin-right: 8px;
+.msg-send-icon,.camera-icon{
+    background: linear-gradient(to top right,#804f,#55185d );
+    color: white;
+    border-radius: 10px;
+    padding: 0 5px;
+    flex: 5%;
+    transition: .5s;
 }
 
+
+.msg-send-icon i:hover,.camera-icon i:hover{
+    transform: scale(1.2,1.2);
+}
 /**********text box***********/

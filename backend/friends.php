@@ -19,10 +19,10 @@
         while($row = mysqli_fetch_assoc($sql1)){
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                <span class="col-sm-2 text-center frnd-profile-pic">
-                <img src="../assets/Images/login-logo.png" width="90%">
-                </span>
-                <span class="col-sm-10 info px-2">'.$row['ACCEPTING_ID'].'</span> 
+                    <span class="col-sm-2 text-center frnd-profile-pic">
+                        <img src="../assets/Images/login-logo.png" width="90%">
+                    </span>
+                    <span class="col-sm-10 info px-2">'.$row['ACCEPTING_ID'].'</span> 
                 </div>';
         }
     }

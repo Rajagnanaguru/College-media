@@ -27,12 +27,12 @@
                 <!---------------------left-side chat ui friends list--------------------------------->
 
 
-                <div class="friends-list-ui col-sm-5 p-0">
+                <div class="friends-list-ui col-sm-5 p-0 m-0">
                         <div class="friends-list-header p-0 sticky-top">
-                            <div class="logo-header d-flex align-items-center">
-                                <span class="text-white col-sm-11">
-                                </span>
-                                <div class="logout col-sm-1">
+                            <div class="logo-header d-flex align-items-center p-0">
+                                <a href="index.php" class="back-btn text-center text-white"><i class="fas fa-arrow-left fa-2x"></i></a>
+                                <div class="logo"></div>
+                                <div class="logout text-center">
                                     <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn"><img src="../assets/bootstrap-icons-1.4.1/power.svg" class="py-1"/></a>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
                 <!---------------------right-side chat ui--------------------------------->
 
                 <div class="col-sm-7 chat-box p-0">
-                        <div class="initial-info"><h1>Have a chat</h1></div>
+                        <div class="initial-info d-flex justify-content-center align-items-center h-100"><h1>Have a chat</h1></div>
                         <!---------------------text-box--------------------------------->
                        
                         <!---------------------text-box--------------------------------->
