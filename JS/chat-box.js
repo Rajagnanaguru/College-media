@@ -23,21 +23,23 @@ $(document).ready(function(){
 $(".chat-box").on('click',".text-bar .msg-send-icon",function(){
     var msg = $(".text-bar textarea");
     var receiver_id = $(".chat-box .sender-name .user_id").text();
-    console.log(receiver_id);
-    let xhr = new XMLHttpRequest(); 
-    xhr.open("POST", "../backend/insert-msg.php", true);
-    xhr.onload = ()=>{
-        if(xhr.readyState == 4 && xhr.status){
-            let data = xhr.response;
-            if(data === "success"){
-                msg.val("");
+    console.log(msg.val());
+    if (msg.val().trim()!=' ' && msg.val().trim() != '') {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "../backend/insert-msg.php", true);
+        xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status) {
+                let data = xhr.response;
+                if (data === "success") {
+                    msg.val("");
+                }
             }
         }
+        var dat = new FormData();
+        dat.append('msg', msg.val());
+        dat.append('receiver_id', receiver_id);
+        xhr.send(dat);
     }
-    var dat = new FormData();
-    dat.append('msg',msg.val());
-    dat.append('receiver_id',receiver_id);
-    xhr.send(dat);
 });
 
 //getting the chats dynamically
