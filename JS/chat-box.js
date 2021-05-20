@@ -24,7 +24,7 @@ $(".chat-box").on('click',".text-bar .msg-send-icon",function(){
     var msg = $(".text-bar textarea");
     var receiver_id = $(".chat-box .sender-name .user_id").text();
     console.log(msg.val());
-    if (msg.val().trim()!=' ' && msg.val().trim() != '') {
+    if (msg.val().trim()!='') {
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "../backend/insert-msg.php", true);
         xhr.onload = () => {
