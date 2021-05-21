@@ -4,9 +4,9 @@
     $msg = mysqli_real_escape_string($conn,$_POST['msg']);
     $receiver_id = mysqli_real_escape_string($conn,$_POST['receiver_id']);
     $sender_id = $_SESSION['Id'];
-
+    //echo $sender_id;
     if(isset($_SESSION['Id'])){
-        //echo $receiver_id;
+        //echo $receiver_id;}
         $sql = mysqli_query($conn,"INSERT INTO CHAT(SENDER,RECEIVER,MESSAGE) VALUES('{$sender_id}','{$receiver_id}','{$msg}')");
             
         if($sql){
@@ -16,7 +16,7 @@
             echo mysqli_error($conn);
         }
     }
-    else{
+   /* else{
         header(location: "../src/loginPage.php");
-    }
+    }*/
 ?>
