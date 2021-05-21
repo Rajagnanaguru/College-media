@@ -22,8 +22,7 @@ $(document).ready(function(){
                         if(Xhr.readyState == 4 && xhr.status){
                             let data = Xhr.response;
                             chat.html(data);
-                            
-                            //console.log($(".chat-box .chats")[0].scrollHeight);
+                            console.log($(".chat-box .chats")[0].scrollHeight);
                             //scrolling the chats to the bottom
                             $(".chat-box").animate({scrollTop: $(".chat-box")[0].scrollHeight},1000);
                         }
@@ -78,4 +77,41 @@ $(document).ready(function(){
         //scrolling the chats to the bottom
         $(".chat-box").animate({scrollTop: $(".chats")[0].scrollHeight},1000);
     });
+
+    //dynamically getting the messages
+    setInterval(()=>{
+        var receiver_id = $(".chat-box .sender-name .user_id").text();
+        const chat = $(".chat-box").find(".chats");
+        let xhr = new XMLHttpRequest(); 
+        xhr.open("POST", "../backend/display-msg.php", true);
+        xhr.onload = ()=>{
+            if(xhr.readyState == 4 && xhr.status){
+                let data = xhr.response;
+                chat.html(data);
+            }
+        }
+        var dat = new FormData();
+        dat.append('receiver_id',receiver_id);
+        xhr.send(dat);
+    },200);
+
+    
+    //frequently updating the online status
+    setInterval(()=>{
+        var receiver_id = $(".chat-box .sender-name .user_id").text();
+        const status = $(".chat-box").find(".chat-box-header .online-status");
+        let xhr = new XMLHttpRequest(); 
+        xhr.open("POST", "../backend/online_status.php", true);
+        xhr.onload = ()=>{
+            if(xhr.readyState == 4 && xhr.status){
+                let data = xhr.response;
+                console.log(data);
+                status.text(data);
+            }
+        }
+        var dat = new FormData();
+        dat.append('receiver_id',receiver_id);
+        xhr.send(dat);
+    },500);
+
 });

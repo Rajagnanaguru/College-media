@@ -4,7 +4,8 @@
     $receiver_id = mysqli_real_escape_string($conn,$_POST['receiver_id']);
     $sender_id = $_SESSION['Id'];
     //echo $receiver_id;
-        $sql = mysqli_query($conn,"SELECT * FROM CHAT WHERE (SENDER = '{$sender_id}' AND RECEIVER = '{$receiver_id}') OR (SENDER = '{$receiver_id}' AND RECEIVER = '{$sender_id}') ORDER BY CHAT_ID");
+        $sql = mysqli_query($conn,"SELECT * FROM CHAT WHERE (SENDER = '{$sender_id}' AND RECEIVER = '{$receiver_id}') 
+                OR (SENDER = '{$receiver_id}' AND RECEIVER = '{$sender_id}') ORDER BY CHAT_ID");
         if($sql){
             $output = "";
             while($row = mysqli_fetch_assoc($sql)){

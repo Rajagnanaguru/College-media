@@ -12,7 +12,7 @@
                 </span>
                 <div class="col-sm-8 sender-name text-white px-0">
                     <div class="user_id">'.$user_id.'</div>
-                    <div class="online-status">'.$row['STATUS'].'</div>
+                    <div class="online-status"></div>
                 </div>
                 <div class="col-sm-2 text-center unfollow-btn">
                     <button class="btn">Unfollow</button>
