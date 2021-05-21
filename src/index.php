@@ -79,8 +79,11 @@
               </div>
               <?php
                   if(!isset($_SESSION['Id'])){
-                  echo '<div class="log-sign-btns text-center"><button class="btn login-btn bg-transaparent text-dark px-4 text-center">Login</button>
-                  <button class="btn signup-btn bg-transaparent text-dark px-4 mx-2 text-center">Signup</button></div>';
+                  echo '<div class="log-sign-btns text-center"><a href="loginPage.php" class="btn login-btn bg-transaparent text-dark px-4 text-center">Login</a>
+                  <a href="loginPage.php" class="btn signup-btn bg-transaparent text-dark px-4 mx-2 text-center">Signup</a></div>';
+                  }
+                  else{
+                    echo '<div class="log-sign-btns text-center"><a href="chat.php" class="btn login-btn bg-transaparent text-dark px-4 text-center">Chat</a></div>';
                   }
                 ?>
           </div>
