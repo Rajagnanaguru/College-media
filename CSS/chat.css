@@ -6,6 +6,9 @@ body{
     height: 100vh;
 }
 /*****friends list header*******/
+.friends-list-header{
+    z-index: 10;
+}
 
 .logo-header{
     background: #00FFBF;
@@ -51,6 +54,9 @@ body{
 
 /******friends-list*****/
 
+.friends-list,.other-users-list{
+    z-index:-10;
+}
 .friends-list-ui{
     background: linear-gradient(to top right, #804f,#6a359c);
     height: 100vh;
@@ -61,6 +67,7 @@ body{
 .friends-list-ui::-webkit-scrollbar{
     width: 0;
 }
+
 
 .frnd{  
     border-bottom: 1px rgba(0,0,0,.1) solid;

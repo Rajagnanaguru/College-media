@@ -8,7 +8,7 @@
     $output = '
             <div class="row chat-box-header align-items-center sticky-top m-0">
                 <span class="col-sm-2 text-center profile-img px-1">
-                    <img src="../backend/Profile_pics'.$row['IMAGE'].'"> 
+                    <img src="../backend/Profile_pics/'.$row['IMAGE'].'"> 
                 </span>
                 <div class="col-sm-8 sender-name text-white px-0">
                     <div class="user_id">'.$user_id.'</div>

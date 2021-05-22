@@ -13,7 +13,7 @@
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
                     <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../assets/Images/'.$row3['IMAGE'].'" width="90%">
+                        <img src="../backend/Profile_pics/'.$row3['IMAGE'].'" width="90%">
                     </span>';
             if(mysqli_num_rows($sql1)>0){
             $output .= '<span class="col-sm-4 info px-0">'.$row['UNAME'].'</span>
