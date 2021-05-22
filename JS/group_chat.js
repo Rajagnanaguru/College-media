@@ -1,12 +1,14 @@
 $(document).ready(function(){
 
     //displaying the friend name if clicked
-    $(".friends-list").on("click",".frnd",function(){
+    $(".joined-clubs-list").on("click",".frnd",function(){
         var user_id = $(this).children(".info").text();
         const chat_box = $(".chat-box");
         var init_info = $(".initial-info");
+        console.log(user_id);
+
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "../backend/chat-box.php", true);
+        xhr.open("POST", "../backend/group_chat.php", true);
         xhr.onload = ()=>{
         if(xhr.readyState == 4 && xhr.status){
                 let data = xhr.response;
@@ -15,14 +17,15 @@ $(document).ready(function(){
                     
                     const chat = $(".chat-box").find(".chats");
                     var receiver_id = $(".chat-box").find(".user_id").text();
-                    //console.log(receiver_id);
+                    
                     let Xhr = new XMLHttpRequest(); 
-                    Xhr.open("POST", "../backend/display-msg.php", true);
+                    Xhr.open("POST", "../backend/display-grp-msg.php", true);
                     Xhr.onload = ()=>{
                         if(Xhr.readyState == 4 && xhr.status){
                             let data = Xhr.response;
                             chat.html(data);
-                            console.log($(".chat-box .chats")[0].scrollHeight);
+                            //console.log($(".chat-box .chats")[0].scrollHeight);
+                            console.log(data);
                             //scrolling the chats to the bottom
                             $(".chat-box").animate({scrollTop: $(".chat-box")[0].scrollHeight},1000);
                         }
@@ -46,7 +49,7 @@ $(document).ready(function(){
         console.log(receiver_id);
         if(msg.val().trim()!=""){
             let xhr = new XMLHttpRequest(); 
-            xhr.open("POST", "../backend/insert-msg.php", true);
+            xhr.open("POST", "../backend/insert-grp-msg.php", true);
             xhr.onload = ()=>{
                 if(xhr.readyState == 4 && xhr.status){
                     let data = xhr.response;
@@ -56,7 +59,7 @@ $(document).ready(function(){
                         //getting the chats dynamically
                         const chat = $(".chat-box").find(".chats");
                         let xhr = new XMLHttpRequest(); 
-                        xhr.open("POST", "../backend/display-msg.php", true);
+                        xhr.open("POST", "../backend/display-grp-msg.php", true);
                         xhr.onload = ()=>{
                             if(xhr.readyState == 4 && xhr.status){
                                 let data = xhr.response;
@@ -83,7 +86,7 @@ $(document).ready(function(){
         var receiver_id = $(".chat-box .sender-name .user_id").text();
         const chat = $(".chat-box").find(".chats");
         let xhr = new XMLHttpRequest(); 
-        xhr.open("POST", "../backend/display-msg.php", true);
+        xhr.open("POST", "../backend/display-grp-msg.php", true);
         xhr.onload = ()=>{
             if(xhr.readyState == 4 && xhr.status){
                 let data = xhr.response;
@@ -94,24 +97,4 @@ $(document).ready(function(){
         dat.append('receiver_id',receiver_id);
         xhr.send(dat);
     },200);
-
-    
-    //frequently updating the online status
-    setInterval(()=>{
-        var receiver_id = $(".chat-box .sender-name .user_id").text();
-        const status = $(".chat-box").find(".chat-box-header .online-status");
-        let xhr = new XMLHttpRequest(); 
-        xhr.open("POST", "../backend/online_status.php", true);
-        xhr.onload = ()=>{
-            if(xhr.readyState == 4 && xhr.status){
-                let data = xhr.response;
-                //console.log(data);
-                status.text(data);
-            }
-        }
-        var dat = new FormData();
-        dat.append('receiver_id',receiver_id);
-        xhr.send(dat);
-    },500);
-
 });

@@ -2,12 +2,12 @@
     session_start();
     include_once "config.php";
     $msg = mysqli_real_escape_string($conn,$_POST['msg']);
-    $receiver_id = mysqli_real_escape_string($conn,$_POST['receiver_id']);
+    $club_id = mysqli_real_escape_string($conn,$_POST['receiver_id']);
     $sender_id = $_SESSION['Id'];
 
     if(isset($_SESSION['Id'])){
         //echo $receiver_id;
-        $sql = mysqli_query($conn,"INSERT INTO CHAT(SENDER,RECEIVER,MESSAGE) VALUES('{$sender_id}','{$receiver_id}','{$msg}')");
+        $sql = mysqli_query($conn,"INSERT INTO GROUPCHAT(SENDER,CLUB_ID,MESSAGE) VALUES('{$sender_id}','{$club_id}','{$msg}')");
             
         if($sql){
             echo "success";

@@ -9,7 +9,7 @@ $(document).ready(function(){
                 let data = xhr.response;
                 if(data === "Success"){
                     console.log("hello")
-                    location.href = "../src/index.php";
+                    location.href = "../src/myProfile.php";
                 }
                 else{
                     error_msg.html(xhr.response);

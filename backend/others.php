@@ -7,10 +7,13 @@
         while($row = mysqli_fetch_assoc($sql)){
             $sql1 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$row['UNAME']}' AND ACCEPTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 1");
             $sql2 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$_SESSION["Id"]}' AND ACCEPTING_ID = '{$row['UNAME']}' AND FRIENDS = 1");
+            $sql3 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME = '{$row['UNAME']}'");
+            $row3 = mysqli_fetch_assoc($sql3);
+
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
                     <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../assets/Images/login-logo.png" width="90%">
+                        <img src="../assets/Images/'.$row3['IMAGE'].'" width="90%">
                     </span>';
             if(mysqli_num_rows($sql1)>0){
             $output .= '<span class="col-sm-4 info px-0">'.$row['UNAME'].'</span>

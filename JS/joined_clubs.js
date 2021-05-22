@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    const friends_list = $(".friends-list"); 
+    const clubs_list = $(".joined-clubs-list"); 
     //var info = $(".other-users-list .frnd .info");
 
 setInterval(() =>{
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "../backend/friends.php", true);
+    xhr.open("GET", "../backend/joined_clubs.php", true);
     xhr.onload = ()=>{
       if(xhr.readyState == 4 && xhr.status){
             let data = xhr.response;
@@ -13,8 +13,8 @@ setInterval(() =>{
               //friends_list.css("display","none");
             //}
             //else{
-              console.log(data);
-              friends_list.html(data);
+            //console.log(data)
+            clubs_list.html(data);
             //}
           }
       }
