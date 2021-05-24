@@ -36,7 +36,7 @@
                     <a class="nav-link" href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">clubs</a>
+                    <a class="nav-link" href="clubs.php">clubs</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,7 +48,7 @@
                     </div>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">My Profile</a>
+                    <a class="nav-link" href="myProfile.php">My Profile</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Help</a>

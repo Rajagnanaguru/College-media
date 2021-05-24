@@ -25,8 +25,24 @@
                 if($upperCase && $lowerCase && $number && strlen($pwd)>8){
                     //Checking whether the cpassword and confirm the password are same
                     if($pwd == $conf_pwd){
-                        //inserting the data inot student table
-                        $sql2 = mysqli_query($conn,"INSERT INTO STUDENT(UNAME,PASSWORD,STATUS) VALUES('$uname','$pwd','$status')");
+
+                        $path = "Avatars/".$uname.".png";//path for the storage of user avatar image
+                        $image_size = imagecreate(200,200);//creating image of size 200*200
+                        //generating a random rgb values
+                        $red = rand(0,255);
+                        $green = rand(0,255);
+                        $blue = rand(0,255);
+                        $image_bg = imagecolorallocate($image_size,$red,$green,$blue);//creating bg color
+                        imagefill($image_size,0,0,$image_bg);
+                        $text_color = imagecolorallocate($image_size,255,255,255);//creating text color
+                        $font = "Font/Starjedi.ttf";
+                        header('Content-Type: image/png');//informing the browser about the content type
+                        imagettftext($image_size,100,0,55,150,$text_color,$font,strtolower($uname[0]));//printing text on the image
+                        imagepng($image_size,"Profile_pics/".$path);//making image as png 
+                        imagedestroy($image_size);//frees up the cache memory
+                        
+                        //inserting the data into student table
+                        $sql2 = mysqli_query($conn,"INSERT INTO STUDENT(UNAME,PASSWORD,STATUS,IMAGE) VALUES('{$uname}','{$pwd}','{$status}','{$path}')");
                         if($sql2){
                             $sql3 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME= '{$uname}'");
 

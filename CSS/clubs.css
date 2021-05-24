@@ -6,9 +6,6 @@ body{
     height: 100vh;
 }
 /*****friends list header*******/
-.friends-list-header{
-    z-index: 10;
-}
 
 .logo-header{
     background: #00FFBF;
@@ -54,29 +51,19 @@ body{
 
 /******friends-list*****/
 
-.friends-list,.other-users-list{
-    z-index:-10;
-}
-.friends-list-ui{
+.clubs-list-ui{
     background: linear-gradient(to top right, #804f,#6a359c);
     height: 100vh;
     overflow-y: scroll;
     color: white;
 }
 
-.friends-list-ui::-webkit-scrollbar{
+.clubs-list-ui::-webkit-scrollbar{
     width: 0;
 }
 
-
 .frnd{  
     border-bottom: 1px rgba(0,0,0,.1) solid;
-}
-
-.frnd .frnd-profile-pic img{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
 }
 
 /******friends-list*****/
@@ -118,6 +105,19 @@ body{
 .chats{
     margin-bottom: 50px;
 }
+
+.outgoing-msg{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.incoming-msg{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .outgoing-msg .msg-text{
     margin: 5px 10px 5px 0;
     margin-left: auto;
@@ -137,6 +137,14 @@ body{
 .msg-text{
     padding: 10px;
     max-width: 300px;
+}
+
+.profile-id{
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-self: flex-start;
 }
 /*******Chat-box*******/
 

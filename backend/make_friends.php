@@ -13,6 +13,7 @@
         //checking whether the requesting user and the other end user already exists in the friend_request table 
         $sql1 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$friend_id}' AND ACCEPTING_ID = '{$_SESSION['Id']}'"); 
         $sql2 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE (REQUESTING_ID = '{$_SESSION['Id']}' AND ACCEPTING_ID = '{$friend_id}')");
+        
         if(mysqli_num_rows($sql1)>0){
             mysqli_query($conn,"UPDATE FRIEND_REQUEST SET FRIENDS = 1 WHERE REQUESTING_ID = '{$friend_id}' AND ACCEPTING_ID = '{$_SESSION['Id']}'");
         }

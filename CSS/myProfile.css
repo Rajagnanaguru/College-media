@@ -5,12 +5,62 @@
 .container-fluid{
     padding: 0;
     margin: 0;
-    display: grid;
     height: 100vh;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 10% 10% 10% 10% 10%;
 }
 
-.profile-container,.friends-list-container{
-    border: 1px black solid;
+body::-webkit-scrollbar{
+    width: 0;
+}
+
+.profile{
+    background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-01.jpg");
+    background-size: cover; 
+    height: 300px;
+}
+
+.profile-img{
+    z-index: 2;
+}
+.profile-name{
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    font-size: 200px;
+    opacity: .3;
+    letter-spacing: 50px;
+    z-index: 1;
+}
+
+.profile-img img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.edit-icon i:hover{
+    opacity: .9;
+}
+
+.pwd-show-icon img{
+    opacity: .5;
+}
+
+.pwd-show-icon:hover img{
+    opacity: 1;
+}
+
+.save-btn .btn{
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(to right,#F8074B,#fa386f);
+    transition: all .3s ease-in-out;
+    outline: none;
+}
+
+.save-btn .btn:hover{
+    letter-spacing: 2px;
+}
+
+input[name="fname"],input[name="course"],input[name="dept"]{
+    margin-right: 15px;
 }

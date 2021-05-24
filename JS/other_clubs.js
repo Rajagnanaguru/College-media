@@ -1,16 +1,17 @@
 $(document).ready(function(){
-    const other_users_list = $(".other-users-list"); 
+    const other_clubs_list = $(".other-clubs-list"); 
 
 setInterval(() =>{
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "../backend/others.php", true);
+    xhr.open("GET", "../backend/other_clubs.php", true);
     xhr.onload = ()=>{
       if(xhr.readyState == 4 && xhr.status){
             let data = xhr.response;
-            other_users_list.html(data);
+            //console.log(data);
+            other_clubs_list.html(data);
           }
       }
     xhr.send();
-  }, 1000);
+  }, 200);
 
 });
