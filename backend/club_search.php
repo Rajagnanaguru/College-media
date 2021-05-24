@@ -10,6 +10,15 @@ if (mysqli_num_rows($sql)) {
         $row1 = mysqli_fetch_assoc($sql1);
         $sql2 = mysqli_query($conn, "SELECT * FROM CLUBS WHERE ADMIN_ID = '{$_SESSION["Id"]}' AND CLUB_ID = '{$row['CLUB_ID']}'");
         $row2 = mysqli_fetch_assoc($sql2);
+        $sql4 = mysqli_query($conn, "SELECT * FROM GROUPCHAT WHERE CLUB_ID = '{$row['CLUB_ID']}' ORDER BY CHAT_ID DESC LIMIT 1");
+        $row4 = mysqli_fetch_assoc($sql4);
+        
+        if(mysqli_num_rows($sql4)>0){
+            $msg = substr($row4['MESSAGE'], 0, 40)."...";
+        }
+        else{
+            $msg = "No new messages";
+        }
 
         if (mysqli_num_rows($sql2) > 0 || (mysqli_num_rows($sql1) > 0 && $row1['MEMBER'] == 2)) {
             $output .= '
@@ -17,7 +26,7 @@ if (mysqli_num_rows($sql)) {
                 <span class="col-sm-2 text-center frnd-profile-pic">
                 <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '" width="90%">
                 </span>
-                <span class="col-sm-10 info px-2">' . $row['CLUB_ID'] . '</span>
+                <span class="col-sm-10 info px-2"><span class="user_id">' . $row['CLUB_ID'] . '</span><div class="recent-msg">' .$msg.'</div></span>
                 </div>';
         } else if (mysqli_num_rows($sql1) > 0 && $row1['MEMBER'] == 1) {
             $output .= '

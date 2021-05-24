@@ -80,6 +80,15 @@ body{
     height: 40px;
 }
 
+.frnd .info .recent-msg{
+    display: flex;
+}
+
+.frnd .info .recent-msg .msg-status{
+    margin-left: auto;
+}
+
+
 /******friends-list*****/
 
 /*****other users list*****/
@@ -138,6 +147,14 @@ body{
 .msg-text{
     padding: 10px;
     max-width: 300px;
+    display: flex;
+}
+
+.msg-text .msg-time{
+    font-size: 10px;
+    padding-left: 5px;
+    justify-self: flex-end;
+    align-self: flex-end;
 }
 /*******Chat-box*******/
 

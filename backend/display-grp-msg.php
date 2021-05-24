@@ -11,16 +11,17 @@
             while($row = mysqli_fetch_assoc($sql)){
                 $sql1 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME = '{$row['SENDER']}'");
                 $row1 = mysqli_fetch_assoc($sql1);
+                $time = date("H:i",strtotime($row['TIMESTAMP']));
                 if($row['SENDER'] == $sender_id){
                     $output .= '<div class="outgoing-msg">                               
-                                <span class="msg-text">'.$row['MESSAGE'].'</span>
+                                <span class="msg-text">'.$row['MESSAGE'].'<span class="msg-time">'.$time.'</span></span>
                                 <img src="../backend/Profile_pics/'.$row1['IMAGE'].'"class="profile-id">
                                 </div>';
                 }
                 else{
                     $output .= '<div class="incoming-msg">
                                 <img src="../backend/Profile_pics/'.$row1['IMAGE'].'"class="profile-id">
-                                <span class="msg-text">'.$row['MESSAGE'].'</span>
+                                <span class="msg-text">'.$row['MESSAGE'].'<span class="msg-time">'.$time.'</span></span>
                                 </div>';
                 }
             }
