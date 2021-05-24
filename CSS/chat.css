@@ -37,7 +37,7 @@ body{
 
 .search-bar{
     padding-top: 30px;
-    background: rgba(0,0,0,.2);
+    background: #6a359c;
 }
 
 .search-bar .form-control,.input-group-text{
@@ -57,6 +57,7 @@ body{
 .friends-list,.other-users-list{
     z-index:-10;
 }
+
 .friends-list-ui{
     background: linear-gradient(to top right, #804f,#6a359c);
     height: 100vh;
