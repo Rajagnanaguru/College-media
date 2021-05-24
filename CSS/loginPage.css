@@ -5,27 +5,45 @@ body{
     background-color: #f0f0f0 ;
 }
 
-
+.container-fluid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 /*******Form-container********/
 
-.signup-form{
-    width:300px;
-    height: 100vh;
-    padding-top:50px;
+.signup-form,.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: 1s ease-in-out;
 }
 
+.signup-form i,.login-form i{
+    color: crimson;
+}
+
+.signup-form form,.login-form form{
+    width: inherit;
+    background-color: whitesmoke;
+    padding: 70px 70px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .login-form{
-    width:300px;
-    height: 100vh;
-    padding-top:100px;
-    transition: 1s ease-in-out;
     transform: translateX(-200%);
 }
 
 
 .error_msg{
-    color:#EA4851;
+    color:white;
+    padding: 5px;
+    background: lightcoral;
+    border-radius: 10px;
     display: none;
 }
 /*******Form-container********/
@@ -34,18 +52,20 @@ body{
 
 /******Input fields******/
 
-.form-control{
+.input-group{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 50px;
+    background: white;
+}
+.form-control{
     outline: none;
     padding: 10px;
+    background: none;
     border-style: none;
-    box-shadow: 3px 3px 3px 1px #ccc;
 }
 
 .input-group-text{
-    border-radius: 50px;
     border-style: none;
-    box-shadow: 3px 3px 3px 1px #ccc;
 }
 .pwd-show-icon img{
     opacity: .5;
@@ -64,12 +84,12 @@ body{
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     background: linear-gradient(to right,#F8074B,#fa386f);
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
     outline: none;
 }
 
 .submit-btn .btn:hover{
-    transform: scale(1.1,1.1);
+    letter-spacing: 2px;
 }
 /*******Buttons********/
 
@@ -80,19 +100,34 @@ body{
 
 
 /*******Social-media icons*******/
+.social-media{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.social-media img{
-    width: 20%;
+.social-media i{
+    color: crimson;
     transition: 0.5s;
 }
 
 .social-media a{
-    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border-radius: 5px;
 }
 
-.social-media a:hover img{
+.social-media a:hover{
     transform: scale(1.1,1.1);
 }
+
 /*******Social-media icons*******/
 
 
@@ -101,15 +136,28 @@ body{
 
 .panel-left,.panel-right{
     padding: 0;
+    margin: 0;
+    width: 50%;
     height: 100vh;
     position: absolute;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right,#F8074B,#fa386f);
+    background: url("../assets/Images/blue-abstract.jpg");
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     z-index: 10;
     transition: .5s ease-in;
     transition-delay: .5s;
+}
+
+.panel-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;    
 }
 
 .panel-left{
@@ -126,14 +174,17 @@ body{
     color: white;
     margin: 5px;
     padding:10px 40px;
-    transition: padding .3s ease-in;
+    transition: .3s ease-in;
 }
 
 .panel-content .btn:hover{
-    padding:10px 50px;
+    letter-spacing: 3px;
     color: black;
 }
 
 /*******overlay*******/
 
 
+@media only screen and (max-width:567px){
+
+}

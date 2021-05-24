@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     //displaying the friend name if clicked
-    $(".joined-clubs-list").on("click",".frnd",function(){
+    $(".clubs-list-ui").on("click",".frnd",function(){
         var user_id = $(this).children(".info").text();
         const chat_box = $(".chat-box");
         var init_info = $(".initial-info");
@@ -25,7 +25,7 @@ $(document).ready(function(){
                             let data = Xhr.response;
                             chat.html(data);
                             //console.log($(".chat-box .chats")[0].scrollHeight);
-                            console.log(data);
+                            //console.log(data);
                             //scrolling the chats to the bottom
                             $(".chat-box").animate({scrollTop: $(".chat-box")[0].scrollHeight},1000);
                         }

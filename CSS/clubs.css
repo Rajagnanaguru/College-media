@@ -34,7 +34,7 @@ body{
 
 .search-bar{
     padding-top: 30px;
-    background: rgba(0,0,0,.2);
+    background: #6a359c;
 }
 
 .search-bar .form-control,.input-group-text{

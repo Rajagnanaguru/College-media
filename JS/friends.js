@@ -13,12 +13,12 @@ setInterval(() =>{
               //friends_list.css("display","none");
             //}
             //else{
-              console.log(data);
+              //console.log(data);
               friends_list.html(data);
             //}
           }
       }
     xhr.send();
-  }, 200);
+  }, 500);
 
 });

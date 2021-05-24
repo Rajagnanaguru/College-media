@@ -17,7 +17,12 @@ body::-webkit-scrollbar{
 
 .navbar-nav a{
     text-transform: uppercase;
+    transition: .3s;
     color: black;
+}
+
+.nav-link:hover{
+    letter-spacing: 2px;
 }
 
 /************************NAVBAR*****************************/
@@ -71,7 +76,7 @@ body::-webkit-scrollbar{
 }
 
 .card:hover{
-    box-shadow: 3px 3px 30px black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: scale(1.1,1.1);
     transform: translateX(-100px);
     transition: .5s;

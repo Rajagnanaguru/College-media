@@ -56,7 +56,7 @@ if (mysqli_num_rows($sql) > 0 || mysqli_num_rows($sql1) > 0) {
 }
 if ($output === '<span class="text text-uppercase m-4">Others</span>') {
     $output = '<div class="frnd p-3">
-        <span class="col-sm-12 info px-2" id="info">No new users available</span>
+        <span class="col-sm-12 info px-2" id="info">No new clubs available</span>
         </div>';
 }
 echo $output;

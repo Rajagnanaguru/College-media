@@ -7,7 +7,7 @@
 
     if(isset($_SESSION['Id'])){
         //echo $receiver_id;
-        $sql = mysqli_query($conn,"INSERT INTO GROUPCHAT(SENDER,CLUB_ID,MESSAGE) VALUES('{$sender_id}','{$club_id}','{$msg}')");
+        $sql = mysqli_query($conn,"INSERT INTO GROUPCHAT(SENDER,CLUB_ID,MESSAGE,READSTATUS) VALUES('{$sender_id}','{$club_id}','{$msg}',0)");
             
         if($sql){
             echo "success";

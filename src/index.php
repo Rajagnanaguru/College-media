@@ -156,18 +156,18 @@
           <!-- Section: Social media -->
           <section class="mb-4">
             <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1 bg-white" href="#!" role="button">
-              <img src="../assets/bootstrap-icons-1.4.1/facebook.svg">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i class="fab fa-instagram"></i>
             </a>
             
             <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1 bg-white" href="#!" role="button">
-              <img src="../assets/bootstrap-icons-1.4.1/instagram.svg">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-facebook-f"></i>
             </a>
 
             <!-- LinkedIn -->
-            <a class="btn btn-outline-light btn-floating m-1 bg-white" href="#!" role="button">
-              <img src="../assets/bootstrap-icons-1.4.1/linkedin.svg">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-linkedin-in"></i>
             </a>
             
           </section>
