@@ -96,15 +96,14 @@
           <div class="row">
             <div class="card feature-1 col-md-4 mt-5 mb-5 m-auto">     
               <div class="card-body text-center">
-                <h1 >F-1</h1>
-                <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                <h3 >CHATTING AND SHARING</h3>
+                <p class="card-text"> Chat and share documents with your college friends in private chats.</p> 
                 <button class="btn btn-warning  ">
                   <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
                 </button>
               </div>
               <div class="overlay">
-                <h1 class="text-center text-white">F-1</h1>
+                <h3 class="text-center text-white">CHATTING AND SHARING</h3>
               </div>
             </div>
           </div>
@@ -114,15 +113,14 @@
           <div class="row">
             <div class="card feature-2 col-md-4 mt-5 mb-5 m-auto">     
               <div class="card-body text-center">
-                <h1 >F-2</h1>
-                <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                <h3 >CLUBS</h3>
+                <p class="card-text"> Join different clubs and interact in the clubs.</p> 
                 <button class="btn btn-warning  ">
                   <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
                 </button>
               </div>
               <div class="overlay">
-                <h1 class="text-center text-white">F-2</h1>
+                <h3 class="text-center text-white">CLUBS</h3>
               </div>
             </div>
           </div>
@@ -133,15 +131,14 @@
           <div class="row">
             <div class="card feature-3 col-md-4 mt-5 mb-5 m-auto">     
               <div class="card-body text-center">
-                <h1 >F-3</h1>
-                <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                <h3 >EVENTS AND CULTURALS</h3>
+                <p class="card-text"> Get the know the current information about events and culturals.</p> 
                 <button class="btn btn-warning  ">
                   <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
                 </button>
               </div>
               <div class="overlay">
-                <h1 class="text-center text-white">F-3</h1>
+                <h3 class="text-center text-white">EVENTS AND CULTURALS</h3>
               </div>
             </div>
           </div>
@@ -176,9 +173,7 @@
           <!-- Section: Text -->
           <section class="mb-4">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-              repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-              eum harum corrupti dicta, aliquam sequi voluptate quas.
+              Created by iterators.
             </p>
           </section>
           <!-- Section: Text -->
