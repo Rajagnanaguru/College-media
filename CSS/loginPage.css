@@ -28,7 +28,8 @@ body{
 
 .signup-form form,.login-form form{
     width: inherit;
-    background-color: whitesmoke;
+    background: url("../assets/Images/login_bg.png");
+    background-size: cover;
     padding: 70px 70px;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -53,7 +54,7 @@ body{
 /******Input fields******/
 
 .input-group{
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
     border-radius: 50px;
     background: white;
 }
@@ -94,7 +95,7 @@ body{
 /*******Buttons********/
 
 .text{
-    color: lightslategray;
+    color: black;
 }
 
 
@@ -136,15 +137,14 @@ body{
 
 .panel-left,.panel-right{
     padding: 0;
-    margin: 0;
     width: 50%;
-    height: 100vh;
+    height: inherit;
     position: absolute;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../assets/Images/blue-abstract.jpg");
+    background: url("../assets/Images/panel_bg.png");
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     z-index: 10;
@@ -154,10 +154,18 @@ body{
 
 .panel-content{
     display: flex;
+    color: black;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     letter-spacing: 1px;    
+}
+
+.panel-content h2{
+    background-image: linear-gradient(to bottom left,#290a59,#ff7c00);
+    background-clip: unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .panel-left{
@@ -170,6 +178,8 @@ body{
 }
 
 .panel-content .btn{
+    background: linear-gradient(to bottom left,#290a59,#ff7c00);
+    border: none;
     border-radius: 70px;
     color: white;
     margin: 5px;
@@ -179,12 +189,17 @@ body{
 
 .panel-content .btn:hover{
     letter-spacing: 3px;
-    color: black;
 }
 
 /*******overlay*******/
 
 
-@media only screen and (max-width:567px){
+@media only screen and (max-width:900px){
+    .panel-right,.panel-left{
+        display: none;
+    }
 
+    .signup-form{
+        transform: translateX(-50%);
+    }
 }

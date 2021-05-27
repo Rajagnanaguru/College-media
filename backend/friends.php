@@ -10,17 +10,20 @@ if (mysqli_num_rows($sql)) {
         $row2 = mysqli_fetch_assoc($sql2);
 
         if (mysqli_num_rows($sql2) > 0) {
+            $msg = substr($row2['MESSAGE'], 0, 30);
             if ($row2['SENDER'] == $_SESSION["Id"]) {
                 if ($row2['READSTATUS'] == 0) {
-                    $msg = substr($row2['MESSAGE'], 0, 30); 
                     $readStatus = "SENT";
                 } else {
-                    $msg = substr($row2['MESSAGE'], 0, 30);
                     $readStatus = "SEEN";
                 }
             } else {
-                $msg = substr($row2['MESSAGE'], 0, 30);
-                $readStatus = "";
+                if ($row2['READSTATUS'] == 0){
+                $readStatus = '<i class="fas fa-bell"></i>';
+                }
+                else{
+                    $readStatus = "";
+                }
             }
         } else {
             $msg = "No messages yet";
@@ -32,7 +35,7 @@ if (mysqli_num_rows($sql)) {
             $row1 = mysqli_fetch_assoc($sql1);
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
+                    <span class="col-sm -2 text-center frnd-profile-pic">
                     <img src="../backend/Profile_pics/' . $row1['IMAGE'] . '">
                     </span>
                     <span class="col-sm-10 info px-2"><span class="user_id">' . $row['REQUESTING_ID'] . '</span><div class="recent-msg">' . $msg . '<span class="msg-status">'.$readStatus.'</span></div></span>

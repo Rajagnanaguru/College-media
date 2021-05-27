@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="../assets/css/all.min.css">
         <link rel="stylesheet" href="../CSS/home.css">
         <script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../assets/js/bootstrap.min.js"crossorigin="anonymous"></script>       
+        <script type="text/javascript" src="../assets/js/bootstrap.min.js"crossorigin="anonymous"></script>     
     </head>
     <body>
       <div class="nav-w-slogan">
@@ -26,9 +26,8 @@
         <section id="navigation">
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index.php">CHAT</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
@@ -43,15 +42,12 @@
                       Events
                     </a>
                     <div class="dropdown-menu" aria-labelledby="#navbarDropdown">
-                      <a class="dropdown-item text-dark" href="#">Kuruskshetra</a>
+                      <a class="dropdown-item text-dark" href="kurukshetra.html">Kuruskshetra</a>
                       <a class="dropdown-item text-dark" href="#">Techofes</a>
                     </div>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="myProfile.php">My Profile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Help</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About us</a>
@@ -74,8 +70,8 @@
         <!---------------Slogan----------------->
         <section class="slogan d-flex justify-content-center align-items-center">
           <div class="container-fluid">
-              <div class="logo-name text-center">
-                <h1>CONNECT-G</h1>
+              <div class="logo-name text-center">               
+                <p class="fill-text"><i class="fas fa-eye"></i>TERATORS</p>
               </div>
               <?php
                   if(!isset($_SESSION['Id'])){
@@ -83,7 +79,7 @@
                   <a href="loginPage.php" class="btn signup-btn bg-transaparent text-dark px-4 mx-2 text-center">Signup</a></div>';
                   }
                   else{
-                    echo '<div class="log-sign-btns text-center"><a href="chat.php" class="btn login-btn bg-transaparent text-dark px-4 text-center">Chat</a></div>';
+                    echo '<div class="chat-btn text-center"><a href="chat.php" class="btn bg-transaparent text-dark px-4 text-center">Chat</a></div>';
                   }
                 ?>
           </div>

@@ -32,10 +32,12 @@ if (!isset($_SESSION['Id'])) {
             <div class="friends-list-ui col-sm-5 p-0 m-0">
                 <div class="friends-list-header p-0 sticky-top">
                     <div class="logo-header d-flex align-items-center p-0">
-                        <a href="index.php" class="back-btn text-center text-white"><i class="fas fa-arrow-left fa-2x"></i></a>
-                        <div class="logo"></div>
+                        <a href="index.php" class="back-btn text-center text-white"><i class="fas fa-arrow-left fa-1x"></i></a>
+                        <div class="logo mx-3">
+                        <p class="fill-text m-0"><i class="fas fa-eye"></i>TERATORS</p>
+                        </div>
                         <div class="logout text-center">
-                            <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn"><img src="../assets/bootstrap-icons-1.4.1/power.svg" class="py-1" /></a>
+                            <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn"><i class="fas fa-sign-out-alt fa-1x text-white"></i></a>
                         </div>
                     </div>
                     <!---------------------friends list search bar--------------------------------->
@@ -81,6 +83,9 @@ if (!isset($_SESSION['Id'])) {
                 <!---------------------text-box--------------------------------->
             </div>
 
+            <!--used for image sending in chat -->
+            <input type="file" name="img" class="img_sender" style="display:none">
+
             <!---------------------right-side chat ui--------------------------------->
         </div>
     </div>
@@ -89,6 +94,7 @@ if (!isset($_SESSION['Id'])) {
     <script type="text/javascript" src="../JS/chat-box.js"></script>
     <script type="text/javascript" src="../JS/make_friends.js"></script>
     <script type="text/javascript" src="../JS/search.js"></script>
+    <script type="text/javascript" src="../JS/unfollow.js"></script>
 </body>
 
 </html>

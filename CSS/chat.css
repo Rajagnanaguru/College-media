@@ -17,23 +17,26 @@ body{
     background: linear-gradient(to top right,#804f,#55185d );
 }
 
+.logo-header a i{
+    font-size: 20px;
+}
+
 .back-btn{
     flex: 10%;
 }
 
 .logo{
     flex: 70%;
+    font-size: 25px;    
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
 }
 
 .logout{
     flex: 20%;
 }
 
-.logout .btn{
-    background-color: white;
-    border-radius: 50px;
-    box-shadow: 1px 1px 1px white;
-}
 
 .search-bar{
     padding-top: 30px;
@@ -55,6 +58,7 @@ body{
 /******friends-list*****/
 
 .friends-list,.other-users-list{
+    margin-top: 5px;
     z-index:-10;
 }
 
@@ -80,14 +84,15 @@ body{
     height: 40px;
 }
 
+
 .frnd .info .recent-msg{
     display: flex;
+    font-size: 13px;
 }
 
 .frnd .info .recent-msg .msg-status{
     margin-left: auto;
 }
-
 
 /******friends-list*****/
 
@@ -156,6 +161,7 @@ body{
     justify-self: flex-end;
     align-self: flex-end;
 }
+
 /*******Chat-box*******/
 
 
@@ -216,12 +222,17 @@ body{
     color: white;
     border-radius: 10px;
     padding: 0 5px;
-    flex: 5%;
+    flex: 4;
     transition: .5s;
 }
 
 
 .msg-send-icon i:hover,.camera-icon i:hover{
     transform: scale(1.2,1.2);
+}
+
+.camera-icon input{
+    flex: 2%;
+    display: none;
 }
 /**********text box***********/

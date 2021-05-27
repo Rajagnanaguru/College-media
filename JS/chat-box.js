@@ -8,6 +8,7 @@ $(document).ready(function () {
         const chat_box = $(".chat-box");
         const init_info = $(".initial-info");
         console.log(user_id);
+        
         //ajax start
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "../backend/chat-box.php", true);
@@ -121,4 +122,8 @@ $(document).ready(function () {
         xhr.send(dat);
     }, 500);
 
+
+    $(".chat-box").on("click",".camera-icon",function(){
+        $(".img_sender").trigger("click");
+    });
 });
