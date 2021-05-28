@@ -27,16 +27,19 @@ if (!isset($_SESSION['Id'])) {
     <div class="row container-fluid">
         <div class="profile container d-flex justify-content-center align-items-center">
             <div class="profile-img d-flex justify-content-center">
-                <img src="../assets/Images/login-logo.png" width="90%">
+                <img src="" width="90%">
             </div>
             <span class="profile-name text-center text-white"><?php echo $row['UNAME']; ?></span>
+            <a href="index.php" class="back-btn"><i class="fas fa-arrow-left fa-2x text-white"></i><a>
         </div>
         <div class="profile-container d-flex col-sm-8 m-auto">
             <form method="POST" enctype="multipart/form-data" id="profile-form" class="m-auto" onsubmit="return false;">
                 <div class="edit-icon my-4 text-center">
                     <i class="fas fa-user-edit fa-3x"></i>
+                    <div class="edit mt-3">Click the icon to Edit</div>
                 </div>
                 <!---------------------student name section-------------------------->
+                <label>Student Name</label>
                 <div class="input-group mb-4 d-flex justify-content-center">
                     <span class="input-group-text bg-white">
                         <i class="fas fa-user-graduate"></i>
@@ -47,6 +50,7 @@ if (!isset($_SESSION['Id'])) {
                 <!---------------------student name section-------------------------->
 
                 <!---------------------paswword section-------------------------->
+                <label>Password</label>
                 <div class="input-group mb-4 w-50">
                     <span class="input-group-text bg-white">
                         <img src="../assets/bootstrap-icons-1.4.1/lock-fill.svg">
@@ -63,6 +67,11 @@ if (!isset($_SESSION['Id'])) {
                 <!---------------------paswword section-------------------------->
 
                 <!---------------------student academic details-------------------------->
+                <div class="academic-label">
+                <label>Course</label>
+                <label>Department</label>
+                <label>Year</label>
+                </div>
                 <div class="input-group mb-4 d-flex justify-content-center">
                     <span class="input-group-text bg-white">
                         <img src="../assets/bootstrap-icons-1.4.1/person-fill.svg">
@@ -77,13 +86,15 @@ if (!isset($_SESSION['Id'])) {
                     </span>
                     <input type="text" name="year" class="form-control year" placeholder="eg: 1,2" readonly>
                 </div>
-
+                
+                <label>College Name</label>
                 <div class="input-group mb-4">
                     <input type="text" name="college_name" class="form-control cname" placeholder="Your college name" readonly>
                 </div>
                 <!---------------------student academic details-------------------------->
 
                 <!---------------------Add or change profile image-------------------------->
+                <label>Profile Picture</label>
                 <div class="input-group mb-4">
                     <input type="file" name="profile_img" class="form-control input_img">
                 </div>

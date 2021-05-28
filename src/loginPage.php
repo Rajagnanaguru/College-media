@@ -49,7 +49,7 @@
                         </div>
                         <div class="text-center">
                             <a href="#" class="text text-decoration-none">Forget Password?</a><br>
-                            <a class="text nav-link" onclick="signup_toggle()">Don't have an account? Signup</a>
+                            <a class="text nav-link">Don't have an account? Signup</a>
                         </div>
                     </form>
                 </div>
@@ -100,7 +100,7 @@
                             <button class="btn text-white px-4">Signup</button>
                         </div>
                         <div class="text-center">
-                            <a href="#" class=" text nav-link" onclick="login_toggle()">Already have an account? Login</a>
+                            <a href="#" class=" text nav-link">Already have an account? Login</a>
                             <span class="text">Or Signup using</span>
                         </div>
                         <div class="social-media text-center">
@@ -127,20 +127,19 @@
             <!--------------Overlay--------------------->
             <div class="panel-left" id="panel-left">
                 <div class="panel-content">
-                    <h1 class="logo">CONNECT-g</h1>
-                    <h5 class="text-center mb-4 text-white">Interact, Integrate & have Insights about our CEG here!</h5>
-                    <h3 class="text-center mb-4 text-white">Sign in to Explore</h3>
+                    <p class="text-center mb-4">Interact, Integrate & have Insights about our CEG here!</p>
+                    <h2 class="text-center mb-4">Join us to Explore!</h2>
                     <div class="login-nav text-center">
-                        <button class="btn btn-outline-light bg-transaparent" onclick="login_toggle()">Login</button>
+                        <button class="btn btn-outline-light bg-transaparent login">Login</button>
                         <button class="btn btn-outline-light bg-transaparent">Cancel</button>
                     </div>
                 </div>
             </div>
             <div class="panel-right" id="panel-right">
                 <div class="panel-content m-auto">
-                    <h2 class="text-center mb-4 text-white text-uppercase"><img src="../assets/Images/app_logo.png"</h2>
+                <h2 class="text-center mb-4">Log in to Explore further!</h2>
                     <div class="signup-nav text-center">
-                        <button class="btn btn-outline-light bg-transaparent" onclick="signup_toggle()">Signup</button>
+                        <button class="btn btn-outline-light bg-transaparent signup">Signup</button>
                         <button class="btn btn-outline-light bg-transaparent">Cancel</button>
                     </div>
                 </div>

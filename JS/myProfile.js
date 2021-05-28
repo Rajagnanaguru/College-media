@@ -45,6 +45,8 @@ $(document).ready(function () {
         $(".course").attr("value", data.course);
         $(".dept").attr("value", data.dept);
         $(".year").attr("value", data.year);
+        $('.cname').attr("value",data.cname);
+        $('.input_img').attr("value",data.img);
         $(".profile-img img").attr("src",img_loc);
     }
 });

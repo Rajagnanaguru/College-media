@@ -2,11 +2,11 @@ $(document).ready(function(){
 
     //displaying the friend name if clicked
     $(".clubs-list-ui").on("click",".frnd",function(){
-        var user_id = $(this).children(".info").text();
+        var user_id = $(this).find(".info .user_id").text();
         const chat_box = $(".chat-box");
         var init_info = $(".initial-info");
         console.log(user_id);
-
+        console.log(1);
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "../backend/group_chat.php", true);
         xhr.onload = ()=>{

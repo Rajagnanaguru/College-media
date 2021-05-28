@@ -4,10 +4,11 @@ $(document).ready(function () {
     $(".users-list").on("click", ".frnd", function () {
         
         //variables
-        var user_id = $(this).children(".info").text();
+        var user_id = $(this).find(".user_id").text();
         const chat_box = $(".chat-box");
         const init_info = $(".initial-info");
-
+        console.log(user_id);
+        
         //ajax start
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "../backend/chat-box.php", true);
@@ -49,6 +50,7 @@ $(document).ready(function () {
     //sending the user typed message to php
     $(".chat-box").on('click', ".text-bar .msg-send-icon", function () {
         //variables
+        var receiver_id = $(".chat-box .sender-name .user_id").text();
         var msg = $(".text-bar textarea");
         //console.log(msg.val());
 
@@ -120,4 +122,8 @@ $(document).ready(function () {
         xhr.send(dat);
     }, 500);
 
+
+    $(".chat-box").on("click",".camera-icon",function(){
+        $(".img_sender").trigger("click");
+    });
 });

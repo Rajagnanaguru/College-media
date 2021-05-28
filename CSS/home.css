@@ -28,8 +28,35 @@ body::-webkit-scrollbar{
 /************************NAVBAR*****************************/
 
 /************************SLOGAN*****************************/
+.slogan .logo-name{
+    font-size: 10vh;
+    font-weight: bold;
+    animation: anim1 10s infinite;
+}
 
-.login-btn,.signup-btn{
+@keyframes anim1 {
+    0%{
+        letter-spacing: 20px;
+        color: transparent
+    }
+    50%{
+        letter-spacing: 0px;
+        color: black;
+    }
+    100%{
+        letter-spacing: 20px;
+        color: transparent;
+    }
+}
+/*(@supports(-webkit-text-stroke: 1px white){
+    .slogan .logo-name .fill-text{
+        color: transparent;
+        font-size: 115px;
+        -webkit-text-stroke: 3px black;
+    }
+}*/
+
+.login-btn,.signup-btn,.chat-btn .btn{
     border-radius: 30px;
     transition: all .3s ease-in;
 }
@@ -38,15 +65,21 @@ body::-webkit-scrollbar{
     height: inherit;
 }
 
-.slogan .btn:hover{
+
+
+.slogan .btn{
     background-color: white;
-    border-color: white;
-    letter-spacing: 2px;
+    border: 1px white solid;
+}
+
+.slogan .btn:hover{
+    letter-spacing: 4px;
 }
 
 #Info h1{
     font-weight: 700;
 }
+
 /************************SLOGAN*****************************/
 
 /************************CARDS*****************************/

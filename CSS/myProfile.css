@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    
 }
 
 .container-fluid{
@@ -23,14 +24,16 @@ body::-webkit-scrollbar{
 }
 .profile-name{
     position: absolute;
-    width: 100%;
     height: inherit;
-    font-size: 200px;
-    opacity: .3;
-    letter-spacing: 50px;
+    letter-spacing: 20px;
+    opacity: .9;
     z-index: 1;
 }
 
+.profile .back-btn{
+    position: absolute;
+    left: 10px;
+}
 .profile-img img{
     width: 250px;
     height: 250px;
@@ -63,4 +66,14 @@ body::-webkit-scrollbar{
 
 input[name="fname"],input[name="course"],input[name="dept"]{
     margin-right: 15px;
+}
+
+.academic-label{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+label{
+    margin-bottom: 5px;
+    margin-left: 2px;
 }

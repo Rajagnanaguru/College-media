@@ -91,6 +91,7 @@ if (!isset($_SESSION['Id'])) {
     <script type="text/javascript" src="../JS/group_chat.js"></script>
     <script type="text/javascript" src="../JS/join_club.js"></script>
     <script type="text/javascript" src="../JS/club_search.js"></script>
+    <script type="text/javascript" src="../JS/unfollow.js"></script>
 </body>
 
 </html>

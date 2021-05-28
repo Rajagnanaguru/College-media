@@ -7,7 +7,7 @@
     //echo $sender_id;
     if(isset($_SESSION['Id'])){
         //echo $receiver_id;}
-        $sql = mysqli_query($conn,"INSERT INTO CHAT(SENDER,RECEIVER,MESSAGE) VALUES('{$sender_id}','{$receiver_id}','{$msg}')");
+        $sql = mysqli_query($conn,"INSERT INTO CHAT(SENDER,RECEIVER,MESSAGE,READSTATUS) VALUES('{$sender_id}','{$receiver_id}','{$msg}',0)");
             
         if($sql){
             echo "success";
