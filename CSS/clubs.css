@@ -14,23 +14,26 @@ body{
     background: linear-gradient(to top right,#804f,#55185d );
 }
 
+.logo-header a i{
+    font-size: 20px;
+}
+
 .back-btn{
     flex: 10%;
 }
 
 .logo{
     flex: 70%;
+    font-size: 25px;    
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
 }
 
 .logout{
     flex: 20%;
 }
 
-.logout .btn{
-    background-color: white;
-    border-radius: 50px;
-    box-shadow: 1px 1px 1px white;
-}
 
 .search-bar{
     padding-top: 30px;

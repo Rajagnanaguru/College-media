@@ -8,13 +8,13 @@ body{
 /*****friends list header*******/
 .friends-list-header{
     z-index: 10;
+    background: linear-gradient(to bottom right,#290a59,#ff7c00);
 }
 
 .logo-header{
-    background: #00FFBF;
     padding: 15px;
     height: 75px;
-    background: linear-gradient(to top right,#804f,#55185d );
+    border-bottom: 2px rgba(0,0,0,.1) solid;
 }
 
 .logo-header a i{
@@ -40,7 +40,6 @@ body{
 
 .search-bar{
     padding-top: 30px;
-    background: #6a359c;
 }
 
 .search-bar .form-control,.input-group-text{
@@ -63,7 +62,7 @@ body{
 }
 
 .friends-list-ui{
-    background: linear-gradient(to top right, #804f,#6a359c);
+    background: linear-gradient(to top right,#290a59,#ff7c00);
     height: 100vh;
     overflow-y: scroll;
     color: white;
@@ -105,6 +104,7 @@ body{
     color: whitesmoke;
     transition: all .5s;
 }
+
 
 /*****other users list*****/
 

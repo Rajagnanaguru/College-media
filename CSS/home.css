@@ -9,21 +9,25 @@ body::-webkit-scrollbar{
 
 .nav-w-slogan{
     height: 100vh;
-    background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-01.jpg");
+    background-image: url("../assets/Images/Events/home-bg.png");
     color: black!important;
-    background-size: cover;
+    background-size: 110vw;
+    background-repeat: no-repeat;
 }
 /************************NAVBAR*****************************/
 
 .navbar-nav a{
     text-transform: uppercase;
     transition: .3s;
-    color: black;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .nav-link:hover{
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
+
 
 /************************NAVBAR*****************************/
 
@@ -34,7 +38,7 @@ body::-webkit-scrollbar{
     animation: anim1 10s infinite;
 }
 
-@keyframes anim1 {
+/*@keyframes anim1 {
     0%{
         letter-spacing: 20px;
         color: transparent
@@ -48,7 +52,7 @@ body::-webkit-scrollbar{
         color: transparent;
     }
 }
-/*(@supports(-webkit-text-stroke: 1px white){
+(@supports(-webkit-text-stroke: 1px white){
     .slogan .logo-name .fill-text{
         color: transparent;
         font-size: 115px;
@@ -69,11 +73,16 @@ body::-webkit-scrollbar{
 
 .slogan .btn{
     background-color: white;
-    border: 1px white solid;
+    letter-spacing: 1px;
+    border: none;
+    transition: .3s;
 }
 
 .slogan .btn:hover{
+    background: linear-gradient(to bottom left,#290a59,#ff7c00);
+    border: none;
     letter-spacing: 4px;
+    color: white;
 }
 
 #Info h1{
@@ -83,67 +92,35 @@ body::-webkit-scrollbar{
 /************************SLOGAN*****************************/
 
 /************************CARDS*****************************/
-#Cards{
+.Cards{
     padding-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
 }
 
-.card{
-    width:20rem;
-    transition: .5s;
+.Cards .card{
+    width: 300px;
 }
-.card h1{
-    font-size: 100px;
-    font-weight: bolder;
-}
-
-.feature-1 .overlay{
-    background: linear-gradient(to right,#F70844,#F83A69);
-}
-
-.feature-2 .overlay{
-    background: linear-gradient(to right,yellow,orange);
-}
-
-.feature-3 .overlay{
-    background: linear-gradient(to right,#F70844,#F83A69);
-}
-
-.card:hover{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.1,1.1);
-    transform: translateX(-100px);
-    transition: .5s;
-}
-
-.feature-2:hover{
-    box-shadow: 3px 3px 30px black;
-    transform: scale(1.1,1.1);
-    transform: translateX(100px);
-    transition: .5s;
-}
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    transition: .5s;
-}
-
-.overlay h1{
-    padding: 40% 0;
-    transition: .5s;
-    text-shadow: 5px 10px 15px black;
-}
-
-.card:hover .overlay{
-    height: 30%;
-} 
-
-.card:hover .overlay h1{
-    transform: translateY(-130px);
-}
-
 /************************CARDS*****************************/
+
+
+@media only screen and (max-width:600px){
+    .nav-w-slogan{
+        height: 100vh;
+        background-image: url("../assets/Images/Events/events-bg.png");
+        color: black!important;
+        background-size: 110vw;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width:800px){
+    
+    .Cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
