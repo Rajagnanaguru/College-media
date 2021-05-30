@@ -52,14 +52,173 @@ if (isset($_SESSION['Id'])) {
                 <a class="nav-link" href="myProfile.php">My Profile</a>
               </li>
               <?php
-              if (isset($_SESSION['Id'])) {
-                echo '<li class="nav-item">
-                      <a href="../backend/logout.php?logout_id=' . $res['UNAME'] . '" class="btn logout-btn">Logout</a>
-                    </li>';
-              }
-              ?>
-            </ul>
+                  if(!isset($_SESSION['Id'])){
+                  echo '<div class="log-sign-btns text-center"><a href="loginPage.php" class="btn login-btn bg-transaparent text-dark px-4 text-center">Login</a>
+                  <a href="loginPage.php" class="btn signup-btn bg-transaparent text-dark px-4 mx-2 text-center">Signup</a></div>';
+                  }
+                  else{
+                    echo '<div class="chat-btn text-center"><a href="chat.php" class="btn bg-transaparent text-dark px-4 text-center">Chat</a></div>';
+                  }
+                ?>
           </div>
+        </section>
+        <!---------------Slogan----------------->
+      </div>
+        <!----------features-------->
+        <section id="Cards" class="p-0">
+          <!--------------Card-1------------------>
+          <div class="row">
+            <div class="card feature-1 col-md-4 mt-5 mb-5 m-auto">     
+              <div class="card-body text-center">
+                <h3 >CHATTING AND SHARING</h3>
+                <p class="card-text"> Chat and share documents with your college friends in private chats.</p> 
+                <button class="btn btn-warning  ">
+                  <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
+                </button>
+              </div>
+              <div class="overlay">
+                <h3 class="text-center text-white">CHATTING AND SHARING</h3>
+              </div>
+            </div>
+          </div>
+          <!--------------Card-1------------------>
+
+          <!--------------Card-2------------------>
+          <div class="row">
+            <div class="card feature-2 col-md-4 mt-5 mb-5 m-auto">     
+              <div class="card-body text-center">
+                <h3 >CLUBS</h3>
+                <p class="card-text"> Join different clubs and interact in the clubs.</p> 
+                <button class="btn btn-warning  ">
+                  <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
+                </button>
+              </div>
+              <div class="overlay">
+                <h3 class="text-center text-white">CLUBS</h3>
+              </div>
+            </div>
+          </div>
+          <!--------------Card-2------------------>
+
+          
+          <!--------------Card-3------------------>
+          <div class="row">
+            <div class="card feature-3 col-md-4 mt-5 mb-5 m-auto">     
+              <div class="card-body text-center">
+                <h3 >EVENTS AND CULTURALS</h3>
+                <p class="card-text"> Get the know the current information about events and culturals.</p> 
+                <button class="btn btn-warning  ">
+                  <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
+                </button>
+              </div>
+              <div class="overlay">
+                <h3 class="text-center text-white">EVENTS AND CULTURALS</h3>
+              </div>
+            </div>
+          </div>
+          <!--------------Card-3------------------>
+        </section>
+         <!----------features-------->
+
+        <!--------footer------------>
+        <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i class="fab fa-instagram"></i>
+            </a>
+            
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+            
+          </section>
+          <!-- Section: Social media -->
+
+          <!-- Section: Text -->
+          <section class="mb-4">
+            <p>
+              Created by iterators.
+            </p>
+          </section>
+          <!-- Section: Text -->
+
+          <!-- Section: Links -->
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#!" class="text-white">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 4</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#!" class="text-white">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 4</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#!" class="text-white">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-white">Link 4</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
         </div>
       </nav>
     </section>
