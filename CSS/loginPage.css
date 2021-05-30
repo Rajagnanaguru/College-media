@@ -144,7 +144,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../assets/Images/panel_bg.png");
+    background: url("../assets/Images/login_bg.png");
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     z-index: 10;
@@ -161,11 +161,27 @@ body{
     letter-spacing: 1px;    
 }
 
+.panel-content i{
+    font-size: 80px;
+    background: linear-gradient(to right,#290a59,#ff7c00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.panel-content p{
+    font-weight: bold;
+    letter-spacing: 3px;
+    width: 50%;
+}
+
 .panel-content h2{
+    font-weight: bold;
+    letter-spacing: 3px;  
     background-image: linear-gradient(to bottom left,#290a59,#ff7c00);
     background-clip: unset;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .panel-left{
@@ -199,7 +215,13 @@ body{
         display: none;
     }
 
-    .signup-form{
-        transform: translateX(-50%);
+    .container-fluid{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        align-items: center;
     }
+
+
+    
 }

@@ -17,134 +17,136 @@
     <!----------------Main Container--------------------->
     <div class="container-fluid">
 
-            <!----------------Login--------------------->
-            <div class="form-container login-container">
-                <div class="login-form m-auto align-items-center" id="login-form">
-                    <form id="login" onsubmit="return false;">
-                        <div class="login-logo mb-4 text-center">
-                            <i class="fas fa-user fa-6x"></i>
-                        </div>
-                        <div class="error_msg text-center mb-3">Error message</div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text bg-transparent">
-                                <img src="../assets/bootstrap-icons-1.4.1/person-fill.svg">
-                            </span>
-                            <input type="text" name="username" class="form-control input_user" placeholder="">
-                        </div>
-                        <div class="input-group mb-4">
-                            <span class="input-group-text bg-transparent">
-                                <img src="../assets/bootstrap-icons-1.4.1/lock-fill.svg">
-                            </span>
-                            <input type="password" name="password" class="form-control input_pass" placeholder="">
-                            <!---------------------paswword-eye-icon---------------------------->
-
-                            <button class="input-group-text bg-transparent pwd-show-icon">
-                                <img src="../assets/bootstrap-icons-1.4.1/eye-fill.svg">
-                            </button>
-
-                            <!-----------------------paswword-eye-icon---------------------------->
-                        </div>
-                        <div class="submit-btn text-center mb-3">
-                            <button class="btn text-white px-4">Login</button>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="text text-decoration-none">Forget Password?</a><br>
-                            <a class="text nav-link">Don't have an account? Signup</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!----------------Login--------------------->
-
-            <!----------------signup--------------------->
-            <div class="form-container signup-container d-flex align-items-center">
-                <div class="signup-form m-auto" id="signup-form">
-                    <form id="signup" onsubmit="return false;">
-                        <div class="signup-logo mb-3 text-center">
-                            <i class="fas fa-user-plus fa-6x"></i>
-                        </div>
-                        <div class="error_msg text-center mb-3">Error message</div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text bg-transparent">
-                                <img src="../assets/bootstrap-icons-1.4.1/person-fill.svg">
-                            </span>
-                            <input type="text" name="username" class="form-control input_user" placeholder="Enter a username">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text bg-transparent">
-                                <img src="../assets/bootstrap-icons-1.4.1/lock-fill.svg">
-                            </span>
-                            <input type="password" name="password" class="form-control input_pass" id="input_pass" placeholder="Enter a password">
-                            <!---------------------paswword-eye-icon-------------------------->
-
-                            <button class="input-group-text bg-transparent pwd-show-icon">
-                                <img src="../assets/bootstrap-icons-1.4.1/eye-fill.svg">
-                            </button>
-
-                            <!---------------------paswword-eye-icon---------------------------->
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text bg-transparent">
-                                <img src="../assets/bootstrap-icons-1.4.1/lock-fill.svg">
-                            </span>
-                            <input type="password" name="conf_password" class="form-control input_pass" placeholder="Confirm password">
-                            <!---------------------paswword-eye-icon---------------------------->
-
-                            <button class="input-group-text bg-transparent pwd-show-icon">
-                                <img src="../assets/bootstrap-icons-1.4.1/eye-fill.svg">
-                            </button>
-
-                            <!---------------------paswword-eye-icon---------------------------->
-                        </div>
-                        <div class="submit-btn text-center mb-3">
-                            <button class="btn text-white px-4">Signup</button>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class=" text nav-link">Already have an account? Login</a>
-                            <span class="text">Or Signup using</span>
-                        </div>
-                        <div class="social-media text-center">
-                            <!-- Facebook -->
-                            <a class="btn btn-floating mx-3" href="#!" role="button">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-
-                            <!-- Instagram -->
-                            <a class="btn btn-floating mx-3" href="#!" role="button">
-                                <i class="fab fa-facebook-f fa-2x"></i>
-                            </a>
-
-                            <!-- LinkedIn -->
-                            <a class="btn btn-floating mx-3" href="#!" role="button">
-                                <i class="fab fa-linkedin-in fa-2x"></i>
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!----------------signup--------------------->
-
-            <!--------------Overlay--------------------->
-            <div class="panel-left" id="panel-left">
-                <div class="panel-content">
-                    <p class="text-center mb-4">Interact, Integrate & have Insights about our CEG here!</p>
-                    <h2 class="text-center mb-4">Join us to Explore!</h2>
-                    <div class="login-nav text-center">
-                        <button class="btn btn-outline-light bg-transaparent login">Login</button>
-                        <button class="btn btn-outline-light bg-transaparent">Cancel</button>
+        <!----------------Login--------------------->
+        <div class="form-container login-container">
+            <div class="login-form m-auto align-items-center" id="login-form">
+                <form id="login" onsubmit="return false;">
+                    <div class="login-logo mb-4 text-center">
+                        <i class="fas fa-user fa-6x"></i>
                     </div>
-                </div>
-            </div>
-            <div class="panel-right" id="panel-right">
-                <div class="panel-content m-auto">
-                <h2 class="text-center mb-4">Log in to Explore further!</h2>
-                    <div class="signup-nav text-center">
-                        <button class="btn btn-outline-light bg-transaparent signup">Signup</button>
-                        <button class="btn btn-outline-light bg-transaparent">Cancel</button>
+                    <div class="error_msg text-center mb-3">Error message</div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-transparent">
+                            <img src="../assets/bootstrap-icons-1.4.1/person-fill.svg">
+                        </span>
+                        <input type="text" name="username" class="form-control input_user" placeholder="">
                     </div>
+                    <div class="input-group mb-4">
+                        <span class="input-group-text bg-transparent">
+                            <img src="../assets/bootstrap-icons-1.4.1/lock-fill.svg">
+                        </span>
+                        <input type="password" name="password" class="form-control input_pass" placeholder="">
+                        <!---------------------paswword-eye-icon---------------------------->
+
+                        <button class="input-group-text bg-transparent pwd-show-icon">
+                            <img src="../assets/bootstrap-icons-1.4.1/eye-fill.svg">
+                        </button>
+
+                        <!-----------------------paswword-eye-icon---------------------------->
+                    </div>
+                    <div class="submit-btn text-center mb-3">
+                        <button class="btn text-white px-4">Login</button>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class="text text-decoration-none">Forget Password?</a><br>
+                        <a class="text nav-link">Don't have an account? Signup</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!----------------Login--------------------->
+
+        <!----------------signup--------------------->
+        <div class="form-container signup-container d-flex align-items-center">
+            <div class="signup-form m-auto" id="signup-form">
+                <form id="signup" onsubmit="return false;">
+                    <div class="signup-logo mb-3 text-center">
+                        <i class="fas fa-user-plus fa-6x"></i>
+                    </div>
+                    <div class="error_msg text-center mb-3">Error message</div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-transparent">
+                            <img src="../assets/bootstrap-icons-1.4.1/person-fill.svg">
+                        </span>
+                        <input type="text" name="username" class="form-control input_user" placeholder="Enter a username">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-transparent">
+                            <img src="../assets/bootstrap-icons-1.4.1/lock-fill.svg">
+                        </span>
+                        <input type="password" name="password" class="form-control input_pass" id="input_pass" placeholder="Enter a password">
+                        <!---------------------paswword-eye-icon-------------------------->
+
+                        <button class="input-group-text bg-transparent pwd-show-icon">
+                            <img src="../assets/bootstrap-icons-1.4.1/eye-fill.svg">
+                        </button>
+
+                        <!---------------------paswword-eye-icon---------------------------->
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-transparent">
+                            <img src="../assets/bootstrap-icons-1.4.1/lock-fill.svg">
+                        </span>
+                        <input type="password" name="conf_password" class="form-control input_pass" placeholder="Confirm password">
+                        <!---------------------paswword-eye-icon---------------------------->
+
+                        <button class="input-group-text bg-transparent pwd-show-icon">
+                            <img src="../assets/bootstrap-icons-1.4.1/eye-fill.svg">
+                        </button>
+
+                        <!---------------------paswword-eye-icon---------------------------->
+                    </div>
+                    <div class="submit-btn text-center mb-3">
+                        <button class="btn text-white px-4">Signup</button>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class=" text nav-link">Already have an account? Login</a>
+                        <span class="text">Or Signup using</span>
+                    </div>
+                    <div class="social-media text-center">
+                        <!-- Facebook -->
+                        <a class="btn btn-floating mx-3" href="#!" role="button">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-floating mx-3" href="#!" role="button">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a class="btn btn-floating mx-3" href="#!" role="button">
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!----------------signup--------------------->
+
+        <!--------------Overlay--------------------->
+        <div class="panel-left" id="panel-left">
+            <div class="panel-content">
+                <i class="fas fa-eye"></i>
+                <h2 class="text-center text-uppercase mb-4">Log in to Explore further!</h2>
+                <div class="login-nav text-center">
+                    <button class="btn bg-transaparent login">Login</button>
+                    <button class="btn bg-transaparent"><a href="index.php" class="text-decoration-none text-white">Cancel</a></button>
                 </div>
             </div>
-            <!--------------Overlay--------------------->
+        </div>
+        <div class="panel-right" id="panel-right">
+            <div class="panel-content">
+                <i class="fas fa-eye"></i>
+                <h2 class="text-center text-uppercase mb-4">Join us to Explore!</h2>
+                <p class="text-center text-uppercase mb-4">Interact, Integrate & have Insights about our CEG here!</p>
+                <div class="signup-nav text-center">
+                    <button class="btn bg-transaparent signup">Signup</button>
+                    <button class="btn bg-transaparent"><a href="index.php" class="text-decoration-none text-white">Cancel</a></button>
+                </div>
+            </div>
+        </div>
+        <!--------------Overlay--------------------->
 
     </div>
     <!----------------Main Container--------------------->
