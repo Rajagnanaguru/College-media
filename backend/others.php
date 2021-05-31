@@ -1,12 +1,16 @@
 <?php
     session_start();
     include_once "../backend/config.php";
-    $sql = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME NOT IN (SELECT ACCEPTING_ID FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 2) AND UNAME NOT IN (SELECT REQUESTING_ID FROM FRIEND_REQUEST WHERE ACCEPTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 2 ) AND NOT UNAME = '{$_SESSION["Id"]}'");
+    $sql = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME NOT IN (SELECT ACCEPTING_ID FROM FRIEND_REQUEST WHERE 
+    REQUESTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 2) AND UNAME NOT IN (SELECT REQUESTING_ID FROM FRIEND_REQUEST WHERE 
+    ACCEPTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 2 ) AND NOT UNAME = '{$_SESSION["Id"]}'");
     if(mysqli_num_rows($sql)>0){
         $output = '<span class="text text-uppercase m-4">Others</span>';
         while($row = mysqli_fetch_assoc($sql)){
-            $sql1 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$row['UNAME']}' AND ACCEPTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 1");
-            $sql2 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$_SESSION["Id"]}' AND ACCEPTING_ID = '{$row['UNAME']}' AND FRIENDS = 1");
+            $sql1 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$row['UNAME']}' AND 
+            ACCEPTING_ID = '{$_SESSION["Id"]}' AND FRIENDS = 1");
+            $sql2 = mysqli_query($conn,"SELECT * FROM FRIEND_REQUEST WHERE REQUESTING_ID = '{$_SESSION["Id"]}' AND 
+            ACCEPTING_ID = '{$row['UNAME']}' AND FRIENDS = 1");
             $sql3 = mysqli_query($conn,"SELECT * FROM STUDENT WHERE UNAME = '{$row['UNAME']}'");
             $row3 = mysqli_fetch_assoc($sql3);
 

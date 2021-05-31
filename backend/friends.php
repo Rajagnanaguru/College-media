@@ -1,12 +1,15 @@
 <?php
 session_start();
 include_once "../backend/config.php";
-$sql = mysqli_query($conn, "SELECT * FROM FRIEND_REQUEST WHERE (ACCEPTING_ID = '{$_SESSION["Id"]}' OR  REQUESTING_ID = '{$_SESSION["Id"]}') AND FRIENDS = 2");
+$sql = mysqli_query($conn, "SELECT * FROM FRIEND_REQUEST WHERE (ACCEPTING_ID = '{$_SESSION["Id"]}' OR  REQUESTING_ID = 
+'{$_SESSION["Id"]}') AND FRIENDS = 2");
 
 if (mysqli_num_rows($sql)) {
     $output = '<span class="text text-uppercase m-4">Friends</span>';
     while ($row = mysqli_fetch_assoc($sql)) {
-        $sql2 = mysqli_query($conn, "SELECT * FROM CHAT WHERE SENDER = '{$_SESSION["Id"]}' AND (RECEIVER = '{$row['ACCEPTING_ID']}' OR RECEIVER = '{$row['REQUESTING_ID']}') OR ((SENDER = '{$row['ACCEPTING_ID']}' OR SENDER = '{$row['REQUESTING_ID']}') AND RECEIVER = '{$_SESSION["Id"]}') ORDER BY CHAT_ID DESC LIMIT 1");
+        $sql2 = mysqli_query($conn, "SELECT * FROM CHAT WHERE SENDER = '{$_SESSION["Id"]}' AND (RECEIVER = '{$row['ACCEPTING_ID']}' OR 
+        RECEIVER = '{$row['REQUESTING_ID']}') OR ((SENDER = '{$row['ACCEPTING_ID']}' OR SENDER = '{$row['REQUESTING_ID']}') AND 
+        RECEIVER = '{$_SESSION["Id"]}') ORDER BY CHAT_ID DESC LIMIT 1");
         $row2 = mysqli_fetch_assoc($sql2);
 
         if (mysqli_num_rows($sql2) > 0) {
@@ -18,10 +21,9 @@ if (mysqli_num_rows($sql)) {
                     $readStatus = "SEEN";
                 }
             } else {
-                if ($row2['READSTATUS'] == 0){
-                $readStatus = '<i class="fas fa-bell"></i>';
-                }
-                else{
+                if ($row2['READSTATUS'] == 0) {
+                    $readStatus = '<i class="fas fa-bell"></i>';
+                } else {
                     $readStatus = "";
                 }
             }
@@ -38,7 +40,8 @@ if (mysqli_num_rows($sql)) {
                     <span class="col-sm -2 text-center frnd-profile-pic">
                     <img src="../backend/Profile_pics/' . $row1['IMAGE'] . '">
                     </span>
-                    <span class="col-sm-10 info px-2"><span class="user_id">' . $row['REQUESTING_ID'] . '</span><div class="recent-msg">' . $msg . '<span class="msg-status">'.$readStatus.'</span></div></span>
+                    <span class="col-sm-10 info px-2"><span class="user_id">' . $row['REQUESTING_ID'] . 
+                    '</span><div class="recent-msg">' . $msg . '<span class="msg-status">' . $readStatus . '</span></div></span>
                 </div>';
         } else {
             $sql1 = mysqli_query($conn, "SELECT * FROM STUDENT WHERE UNAME = '{$row['ACCEPTING_ID']}'");
@@ -50,9 +53,9 @@ if (mysqli_num_rows($sql)) {
                         <img src="../backend/Profile_pics/' . $row1['IMAGE'] . '">
                     </span>
                     <span class="col-sm-10 info px-2">
-                        <span class="user_id">' . $row['ACCEPTING_ID'] .'</span>
-                        <div class="recent-msg">' . $msg . 
-                            '<span class="msg-status">'.$readStatus.'</span>
+                        <span class="user_id">' . $row['ACCEPTING_ID'] . '</span>
+                        <div class="recent-msg">' . $msg .
+                '<span class="msg-status">' . $readStatus . '</span>
                         </div>
                     </span> 
                 </div>';

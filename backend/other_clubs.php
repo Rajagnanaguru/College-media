@@ -8,10 +8,12 @@ if (mysqli_num_rows($sql) > 0 || mysqli_num_rows($sql1) > 0) {
     $output = '<span class="text text-uppercase m-4">Others</span>';
     while ($row1 = mysqli_fetch_assoc($sql1)) {
         if ($row1['MEMBER'] == 1) {
+            $sql2 = mysqli_query($conn, "SELECT * FROM STUDENT WHERE UNAME = '{$row1['REQUESTING_ID']}'");
+            $row2 = mysqli_fetch_assoc($sql2);
             $output .= '
                     <div class="row frnd p-3 m-0 d-flex align-items-center">
                         <span class="col-sm-2 text-center frnd-profile-pic">
-                            <img src="../assets/Images/login-logo.png" width="90%">
+                            <img src="../backend/Profile_pics/'.$row2['IMAGE'].'" width="90%">
                         </span>
                         <span class="col-sm-4 info px-0">' . $row1['REQUESTING_ID'] . '</span>
                         <div class="request col-sm-6 d-flex justify-content-end">
@@ -29,7 +31,7 @@ if (mysqli_num_rows($sql) > 0 || mysqli_num_rows($sql1) > 0) {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
                     <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../assets/Images/login-logo.png" width="90%">
+                        <img src="../backend/Profile_pics/'.$row['PROFILE_IMAGE'].'"  width="90%">
                     </span>
             <span class="col-sm-4 info px-0">' . $row2['CLUB_ID'] . '</span>
                 <div class="request col-sm-6 d-flex justify-content-end">
@@ -44,7 +46,7 @@ if (mysqli_num_rows($sql) > 0 || mysqli_num_rows($sql1) > 0) {
                 $output .= '
             <div class="row frnd p-3 m-0 d-flex align-items-center">
                 <span class="col-sm-2 text-center frnd-profile-pic">
-                    <img src="../assets/Images/login-logo.png" width="90%">
+                    <img src="../backend/Profile_pics/'.$row['PROFILE_IMAGE'].'" width="90%">
                 </span>
                     <span class="col-sm-4 info px-0">' . $row['CLUB_ID'] . '</span>
                     <div class="request col-sm-6 d-flex justify-content-end">

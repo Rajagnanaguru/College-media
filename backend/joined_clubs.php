@@ -23,7 +23,7 @@ if (mysqli_num_rows($sql1) > 0 || mysqli_num_rows($sql2) > 0) {
         $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
                 <span class="col-sm-2 text-center frnd-profile-pic">
-                <img src="../assets/Images/' . $row3['PROFILE_IMAGE'] . '" width="90%">
+                <img src="../backend/Club_profile_pics/' . $row3['PROFILE_IMAGE'] . '" width="90%">
                 </span>
                 <span class="col-sm-10 info px-2"><span class="user_id">' . $row3['CLUB_ID'] . '</span><div class="recent-msg">' .$msg.'</div></span>
                 </div>';
@@ -41,7 +41,7 @@ if (mysqli_num_rows($sql1) > 0 || mysqli_num_rows($sql2) > 0) {
         $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
                 <span class="col-sm-2 text-center frnd-profile-pic">
-                <img src="../assets/Images/' . $row2['PROFILE_IMAGE'] . '" width="90%">
+                <img src="../backend/Club_profile_pics/'. $row2['PROFILE_IMAGE'] . '" width="90%">
                 </span>
                 <span class="col-sm-10 info px-2"><span class="user_id">' . $row2['CLUB_ID'] . '</span><div class="recent-msg">' .$msg.'</div></span>
                 </div>';
