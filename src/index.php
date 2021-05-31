@@ -37,14 +37,13 @@ if (isset($_SESSION['Id'])) {
                 <a class="nav-link" href="index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="clubs.php">clubs</a>
+                <a class="nav-link" href="events.html">Events</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Gallery
                 </a>
                 <div class="dropdown-menu" aria-labelledby="#navbarDropdown">
-                  <a class="dropdown-item text-dark" href="kurukshetra.html">Kuruskshetra</a>
                   <a class="dropdown-item text-dark" href="Techofes.html">Techofes</a>
                 </div>
               </li>
@@ -70,7 +69,7 @@ if (isset($_SESSION['Id'])) {
     <section class="slogan d-flex justify-content-center align-items-center">
       <div class="container-fluid">
         <div class="logo-name text-center">
-          <p class="fill-text"><i class="fas fa-eye"></i>TERATORS</p>
+          <p class="fill-text"><i class="fas fa-eye mx-3"></i><i class="fas fa-plus me-3"></i><i class="fas fa-plus mx-2"></i></p>
         </div>
         <?php
         if (!isset($_SESSION['Id'])) {
@@ -91,12 +90,11 @@ if (isset($_SESSION['Id'])) {
 
     <div class="card feature-1 my-5 m-auto">
       <div class="card-body text-center">
-        <h1>F-1</h1>
-        <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button class="btn btn-warning  ">
-          <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
-        </button>
+        <h1>C</h1>
+        <p class="card-text">Find your friends....Organise members into groups and share messsages regarding events and activities.</p>
+        <div class="button">
+          <a href=# class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Chat</a>
+        </div>
       </div>
     </div>
 
@@ -106,12 +104,11 @@ if (isset($_SESSION['Id'])) {
 
     <div class="card feature-1 my-5 m-auto">
       <div class="card-body text-center">
-        <h1>F-1</h1>
-        <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button class="btn btn-warning  ">
-          <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
-        </button>
+        <h1>E</h1>
+        <p class="card-text">Get updated with our College events and get your hands dirty..</p>
+        <div class="button">
+          <a href=# class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Events</a>
+        </div>
       </div>
     </div>
 
@@ -121,12 +118,11 @@ if (isset($_SESSION['Id'])) {
 
     <div class="card feature-1 my-5 m-auto">
       <div class="card-body text-center">
-        <h1>F-1</h1>
-        <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button class="btn btn-warning  ">
-          <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
-        </button>
+        <h1>G</h1>
+        <p class="card-text">You can see Collection of images of College's inter and intra culturals..</p>
+        <div class="button">
+          <a href=# class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Gallery</a>
+        </div>
       </div>
     </div>
 
@@ -137,36 +133,28 @@ if (isset($_SESSION['Id'])) {
   <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <!-- LinkedIn -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-
-      </section>
-      <!-- Section: Social media -->
 
       <!-- Section: Text -->
       <section class="mb-4">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
+          Done by: R.Rajagnanaguru, Gangaraju Tharun, A.Narendirakumar
         </p>
       </section>
       <!-- Section: Text -->
-      
+      <section class="report">
+        <p>Report to us if any issues..</p>
+        <form id="report-form">
+          <div class="input-group my-2">
+            <input type="email" name="sender-mail" class="form-control mail">
+            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+          </div>
+          <div class="input-group my-2">
+            <input type="text" name="sender-issue" class="form-control msg">
+            <span class="input-group-text"><i class="fas fa-paper-plane"></i></span>
+          </div>
+          <div class="btn">Send</div>
+        </form>
+      </section>
       <div class="copyright-text">
         <p>&copy; 2021</p>
       </div>
@@ -174,6 +162,7 @@ if (isset($_SESSION['Id'])) {
     <!-- Grid container -->
   </footer>
   <!-- Footer -->
+  <script src="../JS/report.js"></script>
 </body>
 
 </html>

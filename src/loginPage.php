@@ -101,23 +101,6 @@
                     </div>
                     <div class="text-center">
                         <a href="#" class=" text nav-link">Already have an account? Login</a>
-                        <span class="text">Or Signup using</span>
-                    </div>
-                    <div class="social-media text-center">
-                        <!-- Facebook -->
-                        <a class="btn btn-floating mx-3" href="#!" role="button">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-
-                        <!-- Instagram -->
-                        <a class="btn btn-floating mx-3" href="#!" role="button">
-                            <i class="fab fa-facebook-f fa-2x"></i>
-                        </a>
-
-                        <!-- LinkedIn -->
-                        <a class="btn btn-floating mx-3" href="#!" role="button">
-                            <i class="fab fa-linkedin-in fa-2x"></i>
-                        </a>
                     </div>
                 </form>
             </div>

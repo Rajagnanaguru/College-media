@@ -10,28 +10,15 @@
 }
 
 .main .container-fluid{
-    background-image: url("../assets/Images/Events/events-bg.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     height: inherit;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr;
     justify-content: center;
     align-items: center;
 }
 
-.techofes-logo{
-    height: 100%;
-    letter-spacing: 3px;
-}
-
-.techofes-logo h1{
-    align-items: end;
-}
-
 
 .event-container{
-    align-self: start;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,32 +66,23 @@
     justify-self: start;
 }
 
-.about{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
+
+.events-details .item img{
+    transition: .3s;
 }
 
+.events-details .item img:hover{
+    transform: scale(1.1,1.1);
+}
 
 @media only screen and (max-width:600px){
 
     .main .container-fluid{
-        background-image: url("../assets/Images/Events/events-bg.png");
-        background-size: 100%;
-        background-repeat: no-repeat;
         height: inherit;
         display: grid;
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 1fr;
         justify-content: center;
         align-items: center;
-    }
-
-    .techofes-logo h1{
-        display: flex;
-        justify-content: center;
-        align-items: start;
     }
 
     .event-container .events{

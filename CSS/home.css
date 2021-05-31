@@ -99,10 +99,52 @@ body::-webkit-scrollbar{
     column-gap: 20px;
 }
 
+.Cards h1{
+    font-size: 100px;
+}
+
+.card-body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
 .Cards .card{
     width: 300px;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.2);
 }
+
+.card-body p{
+    align-self: center;
+}
+.Cards .btn{
+    background: linear-gradient(to bottom left,red,purple);
+    border: none;
+    border-radius: 70px;
+    color: white;
+    margin: 5px;
+    padding:10px 40px;
+    transition: .3s ease-in;
+    letter-spacing: 2px;
+}
+
+.Cards .btn:hover{
+    color: white;
+    letter-spacing: 5px;
+}
+
 /************************CARDS*****************************/
+
+footer .report{
+    width: 300px;
+    margin: auto;
+}
+
+.report .btn{
+    background-color: white;
+    color: black;
+}
 
 
 @media only screen and (max-width:600px){

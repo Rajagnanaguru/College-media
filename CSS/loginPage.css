@@ -54,10 +54,11 @@ body{
 /******Input fields******/
 
 .input-group{
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3) ;
     border-radius: 50px;
     background: white;
 }
+
 .form-control{
     outline: none;
     padding: 10px;
