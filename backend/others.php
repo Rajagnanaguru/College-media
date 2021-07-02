@@ -16,11 +16,10 @@
 
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../backend/Profile_pics/'.$row3['IMAGE'].'" width="90%">
-                    </span>';
+                    <span class="col-sm-6 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Profile_pics/'.$row3['IMAGE'].'">';
             if(mysqli_num_rows($sql1)>0){
-            $output .= '<span class="col-sm-4 info px-0">'.$row['UNAME'].'</span>
+            $output .= '<span class="info px-2">'.$row['UNAME'].'</span></span>
                     <div class="request col-sm-6 d-flex justify-content-end">
                         <button class="btn request-btn">Accept</button>
                         <button class="btn request-btn mx-2">Reject</button>
@@ -28,14 +27,14 @@
                 </div>';
             }
             else if(mysqli_num_rows($sql2)>0){
-                $output .= '<span class="col-sm-4 info px-0">'.$row['UNAME'].'</span>
+                $output .= '<span class="info px-2">'.$row['UNAME'].'</span></span>
                 <div class="request col-sm-6 d-flex justify-content-end">
                     <button class="btn request-btn">Requested</button>
                 </div>
             </div>'; 
             }
             else{
-                $output .= '<span class="col-sm-4 info px-0">'.$row['UNAME'].'</span>
+                $output .= '<span class="info px-2">'.$row['UNAME'].'</span></span>
                     <div class="request col-sm-6 d-flex justify-content-end">
                         <button class="btn request-btn">Request</button>
                     </div>

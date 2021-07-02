@@ -36,12 +36,16 @@ if (mysqli_num_rows($sql)) {
             $sql1 = mysqli_query($conn, "SELECT * FROM STUDENT WHERE UNAME = '{$row['REQUESTING_ID']}'");
             $row1 = mysqli_fetch_assoc($sql1);
             $output .= '
-                <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm -2 text-center frnd-profile-pic">
-                    <img src="../backend/Profile_pics/' . $row1['IMAGE'] . '">
+                <div class="row frnd p-3 m-0 d-flex align-items-center d-flex justify-flex-start align-items-center">
+                    <span class="col-sm-12 text-center frnd-profile-pic">
+                        <img src="../backend/Profile_pics/' . $row1['IMAGE'] . '">
+                        <span class="info px-2">
+                            <span class="user_id">' . $row['REQUESTING_ID'] . '</span>
+                            <div class="recent-msg">' . $msg . 
+                                '<span class="msg-status">' . $readStatus . '</span>
+                            </div>
+                        </span>
                     </span>
-                    <span class="col-sm-10 info px-2"><span class="user_id">' . $row['REQUESTING_ID'] . 
-                    '</span><div class="recent-msg">' . $msg . '<span class="msg-status">' . $readStatus . '</span></div></span>
                 </div>';
         } else {
             $sql1 = mysqli_query($conn, "SELECT * FROM STUDENT WHERE UNAME = '{$row['ACCEPTING_ID']}'");
@@ -49,15 +53,15 @@ if (mysqli_num_rows($sql)) {
 
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
+                    <span class="col-sm-12 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
                         <img src="../backend/Profile_pics/' . $row1['IMAGE'] . '">
+                        <span class="info px-2">
+                            <span class="user_id d-flex justify-flex-start">' . $row['ACCEPTING_ID'] . '</span>
+                            <div class="recent-msg">' . $msg .
+                                '<span class="msg-status">' . $readStatus . '</span>
+                            </div>
+                        </span> 
                     </span>
-                    <span class="col-sm-10 info px-2">
-                        <span class="user_id">' . $row['ACCEPTING_ID'] . '</span>
-                        <div class="recent-msg">' . $msg .
-                '<span class="msg-status">' . $readStatus . '</span>
-                        </div>
-                    </span> 
                 </div>';
         }
     }

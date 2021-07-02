@@ -8,14 +8,7 @@ setInterval(() =>{
     xhr.onload = ()=>{
       if(xhr.readyState == 4 && xhr.status){
             let data = xhr.response;
-            //console.log(info.text());
-            //if(info == "No new users available"){
-              //friends_list.css("display","none");
-            //}
-            //else{
-              //console.log(data);
-              friends_list.html(data);
-            //}
+            friends_list.html(data);
           }
       }
     xhr.send();

@@ -2,7 +2,7 @@
 session_start();
 include_once "config.php";
 $searchTerm = $_POST['searchTerm'];
-$sql = mysqli_query($conn, "SELECT * FROM STUDENT WHERE NOT UNAME = '{$_SESSION['Id']}' AND UNAME LIKE '%{$searchTerm}%'");
+$sql = mysqli_query($conn, "SELECT * FROM STUDENT WHERE NOT UNAME = '{$_SESSION['Id']}' AND UNAME LIKE '{$searchTerm}%'");
 $output = "";
 if (mysqli_num_rows($sql)) {
     while ($row = mysqli_fetch_assoc($sql)) {
@@ -28,7 +28,7 @@ if (mysqli_num_rows($sql)) {
         } else {
             $msg = "No messages yet";
             $readStatus = "";
-        }
+        } 
 
         if (mysqli_num_rows($sql1) && $row1['REQUESTING_ID'] == $row['UNAME'] && $row1['FRIENDS'] == 1) {
             $output .= '

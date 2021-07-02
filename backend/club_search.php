@@ -2,7 +2,7 @@
 session_start();
 include_once "config.php";
 $searchTerm = $_POST['searchTerm'];
-$sql = mysqli_query($conn, "SELECT * FROM CLUBS WHERE CLUB_ID LIKE '%{$searchTerm}%'");
+$sql = mysqli_query($conn, "SELECT * FROM CLUBS WHERE CLUB_ID LIKE '{$searchTerm}%'");
 $output = "";
 if (mysqli_num_rows($sql)) {
     while ($row = mysqli_fetch_assoc($sql)) {

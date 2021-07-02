@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".chat-box").on("click",".btn",function(){
+    $(".chat-box").on("click",".unfollow-btn .btn",function(){
         var btnValue = $(this).text();
         var user_id = $(this).parents(".chat-box-header").children(".sender-name").children(".user_id").text();
         const chat = $(".chat-box");

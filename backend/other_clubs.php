@@ -30,14 +30,14 @@ if (mysqli_num_rows($sql) > 0 || mysqli_num_rows($sql1) > 0) {
         if (mysqli_num_rows($sql2) > 0 && $row2['MEMBER'] == 1) {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
+                    <span class="col-sm-7 col-md-7 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
                         <img src="../backend/Profile_pics/'.$row['PROFILE_IMAGE'].'"  width="90%">
+                        <span class="info px-2">' . $row2['CLUB_ID'] . '</span>
                     </span>
-            <span class="col-sm-4 info px-0">' . $row2['CLUB_ID'] . '</span>
-                <div class="request col-sm-6 d-flex justify-content-end">
-                    <button class="btn request-btn">Requested</button>
-                </div>
-            </div>';
+                    <div class="request col-sm-5 col-md-5 d-flex justify-content-end">
+                        <button class="btn request-btn">Requested</button>
+                    </div>
+                </div>';
         } 
         else if (mysqli_num_rows($sql2) > 0 && $row2['MEMBER'] == 2 ) {
             
@@ -45,14 +45,14 @@ if (mysqli_num_rows($sql) > 0 || mysqli_num_rows($sql1) > 0) {
         else {
                 $output .= '
             <div class="row frnd p-3 m-0 d-flex align-items-center">
-                <span class="col-sm-2 text-center frnd-profile-pic">
+                <span class="col-sm-7 col-md-7 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
                     <img src="../backend/Profile_pics/'.$row['PROFILE_IMAGE'].'" width="90%">
-                </span>
-                    <span class="col-sm-4 info px-0">' . $row['CLUB_ID'] . '</span>
-                    <div class="request col-sm-6 d-flex justify-content-end">
-                        <button class="btn request-btn">Request</button>
-                    </div>
-                </div>';
+                    <span class="info px-2">' . $row['CLUB_ID'] . '</span>
+                </span>  
+                <div class="request col-sm-5 col-md-5 d-flex justify-content-end">
+                    <button class="btn request-btn">Request</button>
+                </div>
+            </div>';
         }
     }
 }

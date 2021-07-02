@@ -5,6 +5,8 @@
     $sql = mysqli_query($conn,"SELECT * FROM CLUB_REQUEST WHERE CLUB_ID = '{$club_id}' AND REQUESTING_ID = '{$_SESSION['Id']}' AND MEMBER = 2");
     $sql1 = mysqli_query($conn,"SELECT * FROM CLUBS WHERE CLUB_ID = '{$club_id}'");
     $row1 = mysqli_fetch_assoc($sql1);
+
+
     if(mysqli_num_rows($sql)>0 || (mysqli_num_rows($sql1)>0 && $row1['ADMIN_ID'] == $_SESSION['Id'])){
     $output = '
             <div class="row chat-box-header align-items-center sticky-top m-0">
@@ -25,6 +27,9 @@
                 <textarea class="p-2" placeholder="type something here..."></textarea>
                 <div class="d-flex align-items-center justify-content-center camera-icon"><i class="fa fa-camera"></i></div>
                 <div class="d-flex align-items-center justify-content-center msg-send-icon"><i class="fa fa-paper-plane"></i></div>
+            </div>
+            <div class="group-info p-0 m-0">
+                
             </div>';
     }
     else{

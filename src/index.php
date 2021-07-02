@@ -36,190 +36,24 @@ if (isset($_SESSION['Id'])) {
               <li class="nav-item">
                 <a class="nav-link" href="index.php">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="events.html">Events</a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Gallery
                 </a>
                 <div class="dropdown-menu" aria-labelledby="#navbarDropdown">
-                  <a class="dropdown-item text-dark" href="Techofes.html">Techofes</a>
+                  <a class="dropdown-item text-dark" href="gallery.html">Techofes</a>
                 </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="myProfile.php">My Profile</a>
               </li>
               <?php
-                  if(!isset($_SESSION['Id'])){
-                  echo '<div class="log-sign-btns text-center"><a href="loginPage.php" class="btn login-btn bg-transaparent text-dark px-4 text-center">Login</a>
-                  <a href="loginPage.php" class="btn signup-btn bg-transaparent text-dark px-4 mx-2 text-center">Signup</a></div>';
-                  }
-                  else{
-                    echo '<div class="chat-btn text-center"><a href="chat.php" class="btn bg-transaparent text-dark px-4 text-center">Chat</a></div>';
-                  }
-                ?>
+              if (isset($_SESSION['Id'])) {
+                echo '<div class="logout text-center">
+                <a href="../backend/logout.php?logout_id='.$res['UNAME'].'" class="btn logout-btn"><i class="fas fa-sign-out-alt fa-1x text-white"></i></a></div>';
+              }
+              ?>
           </div>
-        </section>
-        <!---------------Slogan----------------->
-      </div>
-        <!----------features-------->
-        <section id="Cards" class="p-0">
-          <!--------------Card-1------------------>
-          <div class="row">
-            <div class="card feature-1 col-md-4 mt-5 mb-5 m-auto">     
-              <div class="card-body text-center">
-                <h3 >CHATTING AND SHARING</h3>
-                <p class="card-text"> Chat and share documents with your college friends in private chats.</p> 
-                <button class="btn btn-warning  ">
-                  <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
-                </button>
-              </div>
-              <div class="overlay">
-                <h3 class="text-center text-white">CHATTING AND SHARING</h3>
-              </div>
-            </div>
-          </div>
-          <!--------------Card-1------------------>
-
-          <!--------------Card-2------------------>
-          <div class="row">
-            <div class="card feature-2 col-md-4 mt-5 mb-5 m-auto">     
-              <div class="card-body text-center">
-                <h3 >CLUBS</h3>
-                <p class="card-text"> Join different clubs and interact in the clubs.</p> 
-                <button class="btn btn-warning  ">
-                  <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
-                </button>
-              </div>
-              <div class="overlay">
-                <h3 class="text-center text-white">CLUBS</h3>
-              </div>
-            </div>
-          </div>
-          <!--------------Card-2------------------>
-
-          
-          <!--------------Card-3------------------>
-          <div class="row">
-            <div class="card feature-3 col-md-4 mt-5 mb-5 m-auto">     
-              <div class="card-body text-center">
-                <h3 >EVENTS AND CULTURALS</h3>
-                <p class="card-text"> Get the know the current information about events and culturals.</p> 
-                <button class="btn btn-warning  ">
-                  <a href=# class="text-uppercase text-white font-weight-bolder text-decoration-none">Find Friends</a>
-                </button>
-              </div>
-              <div class="overlay">
-                <h3 class="text-center text-white">EVENTS AND CULTURALS</h3>
-              </div>
-            </div>
-          </div>
-          <!--------------Card-3------------------>
-        </section>
-         <!----------features-------->
-
-        <!--------footer------------>
-        <footer class="bg-dark text-center text-white">
-        <!-- Grid container -->
-        <div class="container p-4">
-          <!-- Section: Social media -->
-          <section class="mb-4">
-            <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-              <i class="fab fa-instagram"></i>
-            </a>
-            
-            <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <!-- LinkedIn -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="fab fa-linkedin-in"></i>
-            </a>
-            
-          </section>
-          <!-- Section: Social media -->
-
-          <!-- Section: Text -->
-          <section class="mb-4">
-            <p>
-              Created by iterators.
-            </p>
-          </section>
-          <!-- Section: Text -->
-
-          <!-- Section: Links -->
-          <section class="">
-            <!--Grid row-->
-            <div class="row">
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#!" class="text-white">Link 1</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 4</a>
-                  </li>
-                </ul>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#!" class="text-white">Link 1</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 4</a>
-                  </li>
-                </ul>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#!" class="text-white">Link 1</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Link 4</a>
-                  </li>
-                </ul>
-              </div>
-              <!--Grid column-->
-            </div>
-            <!--Grid row-->
-          </section>
-          <!-- Section: Links -->
-        </div>
-      </nav>
     </section>
     <!-----------navbar section------------->
 
@@ -243,6 +77,8 @@ if (isset($_SESSION['Id'])) {
     </section>
     <!---------------Slogan----------------->
   </div>
+
+
   <!----------features-------->
   <div class="Cards">
     <!--------------Card-1------------------>
@@ -259,7 +95,7 @@ if (isset($_SESSION['Id'])) {
 
     <!--------------Card-1------------------>
 
-    <!--------------Card-1------------------>
+    <!--------------Card-2------------------>
 
     <div class="card feature-1 my-5 m-auto">
       <div class="card-body text-center">
@@ -270,10 +106,12 @@ if (isset($_SESSION['Id'])) {
         </div>
       </div>
     </div>
+    <!----------features-------->
 
-    <!--------------Card-1------------------>
 
-    <!--------------Card-1------------------>
+    <!--------------Card-2------------------>
+
+    <!--------------Card-3------------------>
 
     <div class="card feature-1 my-5 m-auto">
       <div class="card-body text-center">
@@ -285,43 +123,45 @@ if (isset($_SESSION['Id'])) {
       </div>
     </div>
 
-    <!--------------Card-1------------------>
+    <!--------------Card-3------------------>
   </div>
 
   <!--------footer------------>
   <footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4">
+    <!--------footer------------>
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
 
-      <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          Done by: R.Rajagnanaguru, Gangaraju Tharun, A.Narendirakumar
-        </p>
-      </section>
-      <!-- Section: Text -->
-      <section class="report">
-        <p>Report to us if any issues..</p>
-        <form id="report-form">
-          <div class="input-group my-2">
-            <input type="email" name="sender-mail" class="form-control mail">
-            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-          </div>
-          <div class="input-group my-2">
-            <input type="text" name="sender-issue" class="form-control msg">
-            <span class="input-group-text"><i class="fas fa-paper-plane"></i></span>
-          </div>
-          <div class="btn">Send</div>
-        </form>
-      </section>
-      <div class="copyright-text">
-        <p>&copy; 2021</p>
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Done by: R.Rajagnanaguru, Gangaraju Tharun, A.Narendirakumar
+          </p>
+        </section>
+        <!-- Section: Text -->
+        <section class="report">
+          <p>Report to us if any issues..</p>
+          <form id="report-form">
+            <div class="input-group my-2">
+              <input type="email" name="sender-mail" class="form-control mail">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            </div>
+            <div class="input-group my-2">
+              <input type="text" name="sender-issue" class="form-control msg">
+              <span class="input-group-text"><i class="fas fa-paper-plane"></i></span>
+            </div>
+            <div class="btn">Send</div>
+          </form>
+        </section>
+        <div class="copyright-text">
+          <p>&copy;Copyrights reserved 2021</p>
+        </div>
       </div>
-    </div>
-    <!-- Grid container -->
-  </footer>
-  <!-- Footer -->
-  <script src="../JS/report.js"></script>
+      <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+    <script src="../JS/report.js"></script>
 </body>
 
 </html>

@@ -59,3 +59,5 @@ if (isset($_SESSION['Id'])) {
 } else {
     echo mysqli_error($conn);
 }
+
+?>

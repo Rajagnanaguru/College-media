@@ -64,6 +64,10 @@ if (!isset($_SESSION['Id'])) {
                     </div>
 
                     <!---------------------other users list ui--------------------------------->
+
+
+                    <div class="search-users-list col-sm-12">
+                    </div>
                 </div>
 
             </div>
@@ -85,7 +89,9 @@ if (!isset($_SESSION['Id'])) {
 
             <!--used for image sending in chat -->
             <input type="file" name="img" class="img_sender" style="display:none">
+            <!--used for image sending in chat -->
 
+            
             <!---------------------right-side chat ui--------------------------------->
         </div>
     </div>

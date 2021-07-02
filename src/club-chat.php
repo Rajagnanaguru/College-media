@@ -34,7 +34,7 @@ if (!isset($_SESSION['Id'])) {
                     <div class="logo-header d-flex align-items-center p-0">
                         <a href="index.php" class="back-btn text-center text-white"><i class="fas fa-arrow-left fa-1x"></i></a>
                         <div class="logo">
-                        <p class="fill-text m-0"><i class="fas fa-eye"></i>TERATORS</p>
+                            <p class="fill-text m-0"><i class="fas fa-eye"></i>TERATORS</p>
                         </div>
                         <div class="logout text-center">
                             <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn"><i class="fas fa-sign-out-alt fa-1x text-white"></i></a>
@@ -65,6 +65,9 @@ if (!isset($_SESSION['Id'])) {
 
                     <!---------------------other users list ui--------------------------------->
 
+                    <div class="search-clubs-list">
+                    </div>
+                    
                 </div>
 
 
@@ -80,12 +83,14 @@ if (!isset($_SESSION['Id'])) {
                 <div class="initial-info d-flex justify-content-center align-items-center h-100">
                     <h1>Have a chat</h1>
                 </div>
-                <!---------------------text-box--------------------------------->
-
-                <!---------------------text-box--------------------------------->
             </div>
 
             <!---------------------right-side chat ui--------------------------------->
+
+            <form method="POST" enctype="multipart/form-data" class="profile-dp" id="profile-dp" onsubmit="return false;">
+                <input type="file" name="dp" class="dp">
+            </form>
+
         </div>
     </div>
     <script type="text/javascript" src="../JS/joined_clubs.js"></script>
@@ -94,6 +99,8 @@ if (!isset($_SESSION['Id'])) {
     <script type="text/javascript" src="../JS/join_club.js"></script>
     <script type="text/javascript" src="../JS/club_search.js"></script>
     <script type="text/javascript" src="../JS/unfollow.js"></script>
+    <script type="text/javascript" src="../JS/groupInfo.js"></script>
+    <script type="text/javascript" src="../JS/changeDp.js"></script>
 </body>
 
 </html>
