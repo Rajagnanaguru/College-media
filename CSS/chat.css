@@ -148,6 +148,9 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
     box-shadow:rgba(0,0,0,.2) 0px 8px 29px 10px;
+    background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-02.jpg");
+    background-position: fixed;
+    background-size: cover;
 }
 
 .chat-box::-webkit-scrollbar{
@@ -200,7 +203,7 @@ body{
 .chat-box-header{
     align-items: center;
     height: 75px;
-    background: linear-gradient(to bottom left,#290a59,#ff7c00);
+    background: linear-gradient(to bottom right,#804f,#6a359c);
 }
 
 .chat-box-header .back-btn{
