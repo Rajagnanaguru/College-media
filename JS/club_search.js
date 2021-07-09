@@ -1,6 +1,5 @@
 $(document).ready(function () {
     const searchBar = $(".search-bar input");
-    const clubsList = $(".clubs-list");
     const search_list = $(".search-clubs-list");
     //console.log('hi');
     searchBar.keyup(function () {

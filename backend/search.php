@@ -33,11 +33,11 @@ if (mysqli_num_rows($sql)) {
         if (mysqli_num_rows($sql1) && $row1['REQUESTING_ID'] == $row['UNAME'] && $row1['FRIENDS'] == 1) {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../backend/Profile_pics/' . $row['IMAGE'] . '" width="90%">
+                    <span class="col-6 col-sm-6 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Profile_pics/' . $row['IMAGE'] . '">
+                        <span class="info px-2">' . $row['UNAME'] . '</span>
                     </span>
-                    <span class="col-sm-4 info px-0">' . $row['UNAME'] . '</span>
-                    <div class="request col-sm-6 d-flex justify-content-end">
+                    <div class="request col-6 col-sm-6 d-flex justify-content-end">
                         <button class="btn request-btn">Accept</button>
                         <button class="btn request-btn mx-2">Reject</button>
                     </div>
@@ -45,30 +45,35 @@ if (mysqli_num_rows($sql)) {
         } else if (mysqli_num_rows($sql1) && $row1['ACCEPTING_ID'] == $row['UNAME'] && $row1['FRIENDS'] == 1) {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../backend/Profile_pics/' . $row['IMAGE'] . '" width="90%">
+                    <span class="col-6 col-sm-6 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Profile_pics/' . $row['IMAGE'] . '">
+                        <span class="info px-2">' . $row['UNAME'] . '</span>
                     </span>
-                    <span class="col-sm-4 info px-0">' . $row['UNAME'] . '</span>
-                    <div class="request col-sm-6 d-flex justify-content-end">
+                    <div class="request col-6 col-sm-6 d-flex justify-content-end">
                         <button class="btn request-btn">Requested</button>
                     </div>
                 </div>';
         } else if (mysqli_num_rows($sql1) && $row1['FRIENDS'] == 2) {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
-                    <img src="../backend/Profile_pics/' . $row['IMAGE'] . '">
+                    <span class="col-12 col-sm-12 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Profile_pics/' . $row['IMAGE'] . '">
+                        <span class="info px-2">
+                            <span class="user_id d-flex justify-flex-start">' . $row['UNAME'] . '</span>
+                            <div class="recent-msg">' . $msg . '
+                                <span class="msg-status">'.$readStatus.'</span>
+                            </div>
+                        </span>
                     </span>
-                    <span class="col-sm-10 info px-2"><span class="user_id">' . $row['UNAME'] . '</span><div class="recent-msg">' . $msg . '<span class="msg-status">'.$readStatus.'</span></div></span>
                 </div>';
         } else {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../backend/Profile_pics/' . $row['IMAGE'] . '" width="90%">
+                    <span class="col-6 col-sm-6 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Profile_pics/' . $row['IMAGE'] . '">
+                        <span class="info px-2">' . $row['UNAME'] . '</span>
                     </span>
-                    <span class="col-sm-4 info px-0">' . $row['UNAME'] . '</span>
-                    <div class="request col-sm-6 d-flex justify-content-end">
+                    <div class="request col-6 col-sm-6 d-flex justify-content-end">
                         <button class="btn request-btn">Request</button>
                     </div>
                 </div>';

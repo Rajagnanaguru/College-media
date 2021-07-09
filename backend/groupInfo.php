@@ -38,7 +38,7 @@
 
         if(($Row>0 && $Row['FRIENDS'] == 2) || $adminId == $_SESSION['Id']){
             $output .='
-            <span class="col-sm-12 text-center profile-pic d-flex justify-content-start align-items-center p-0">
+            <span class="col-12 col-sm-12 text-center profile-pic d-flex justify-content-start align-items-center p-0">
                 <img src="../backend/Profile_pics/'.$row1['IMAGE'].'">
                 <span class="user_id px-3">'.$adminId.'</span>
             </span>';
@@ -46,32 +46,32 @@
 
         else if($Row>0 && $Row['FRIENDS'] == 1 && $Row['REQUESTING_ID'] == $_SESSION['Id']){
             $output .='
-            <span class="col-sm-7 col-lg-6 text-center profile-pic d-flex justify-content-start align-items-center p-0">
+            <span class="col-7 col-sm-7 col-lg-6 text-center profile-pic d-flex justify-content-start align-items-center p-0">
                 <img src="../backend/Profile_pics/'.$row1['IMAGE'].'">
                 <span class="user_id px-3">'.$adminId.'</span>
             </span>
-            <span class="request col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
+            <span class="request col-5 col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
                 <button class="btn request-btn mr-auto">Requested</button>
             </span>';
         }
         else if($Row>0 && $Row['FRIENDS'] == 1 && $Row['ACCEPTING_ID'] == $_SESSION['Id']){
             $output .='
-            <span class="col-sm-7 col-lg-6 text-center profile-pic d-flex justify-content-start align-items-center p-0">
+            <span class="col-7 col-sm-7 col-lg-6 text-center profile-pic d-flex justify-content-start align-items-center p-0">
                 <img src="../backend/Profile_pics/'.$row1['IMAGE'].'">
                 <span class="user_id px-3">'.$adminId.'</span>
             </span>
-            <span class="request col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
+            <span class="request col-5 col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
                 <button class="btn request-btn">Accept</button>
                 <button class="btn request-btn mx-2">Reject</button>
             </span>';
         }
         else{
             $output .='
-            <span class="col-sm-7 col-lg-6 text-center profile-pic d-flex justify-content-start align-items-center p-0">
+            <span class="col-7 col-sm-7 col-lg-6 text-center profile-pic d-flex justify-content-start align-items-center p-0">
                 <img src="../backend/Profile_pics/'.$row1['IMAGE'].'">
                 <span class="user_id px-3">'.$adminId.'</span>
             </span>
-            <span class="request col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
+            <span class="request col-5 col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
                 <button class="btn request-btn mr-auto">Request</button>
             </span>';
         }
@@ -91,7 +91,7 @@
         if(($row3>0 && $row3['FRIENDS'] == 2 )|| $row2['UNAME'] == $_SESSION['Id']){
             $output .= '
             <div class="row member m-2 py-2">
-                <span class="col-sm-12 text-center profile-pic d-flex justify-content-start align-items-center p-0">
+                <span class="col-12 col-sm-12 text-center profile-pic d-flex justify-content-start align-items-center p-0">
                     <img src="../backend/Profile_pics/'.$row2['IMAGE'].'">
                     <span class="user_id px-3">'.$row2['UNAME'].'</span>
                 </span>
@@ -100,11 +100,11 @@
         else if($row3>0 && $row3['FRIENDS'] == 1 && $row3['REQUESTING_ID'] == $_SESSION['Id']){
             $output .= '
             <div class="row member m-2 py-2">
-                <span class="col-sm-7 col-lg-6 text-center profile-pic  d-flex justify-content-start align-items-center p-0">
+                <span class="col-7 col-sm-7 col-lg-6 text-center profile-pic  d-flex justify-content-start align-items-center p-0">
                     <img src="../backend/Profile_pics/'.$row2['IMAGE'].'">
                     <span class="user_id px-3">'.$row2['UNAME'].'</span>
                 </span>
-                <span class="request col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
+                <span class="request col-5 col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
                     <button class="btn request-btn mr-auto">Requested</button>
                 </span>
             </div>';
@@ -112,11 +112,11 @@
         else if($row3>0 && $row3['FRIENDS'] == 1 && $row3['ACCEPTING_ID'] == $_SESSION['Id']){
             $output .= '
             <div class="row member m-2 py-2">
-                <span class="col-sm-7 col-lg-6 text-center profile-pic  d-flex justify-content-start align-items-center p-0">
+                <span class="col-7 col-sm-7 col-lg-6 text-center profile-pic  d-flex justify-content-start align-items-center p-0">
                     <img src="../backend/Profile_pics/'.$row2['IMAGE'].'">
                     <span class="user_id px-3">'.$row2['UNAME'].'</span>
                 </span>
-                <span class="request col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
+                <span class="request col-5 col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
                     <button class="btn request-btn">Accept</button>
                     <button class="btn request-btn mx-2">Reject</button>
                 </span>
@@ -125,11 +125,11 @@
         else{
             $output .= '
             <div class="row member m-2 d-flex py-2">
-                <span class="col-sm-7 col-lg-6 text-center profile-pic d-flex justify-content-start align-items-center p-0">
+                <span class="col-7 col-sm-7 col-lg-6 text-center profile-pic d-flex justify-content-start align-items-center p-0">
                     <img src="../backend/Profile_pics/'.$row2['IMAGE'].'">
                     <span class="user_id px-3">'.$row2['UNAME'].'</span>
                 </span>
-                <span class="request col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
+                <span class="request col-5 col-sm-5 col-lg-6 m-0 d-flex justify-content-end">
                     <button class="btn request-btn mr-auto">Request</button>
                 </span>
             </div>';

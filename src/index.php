@@ -34,10 +34,10 @@ if (isset($_SESSION['Id'])) {
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
+                <a class="nav-link text-dark" href="index.php">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Gallery
                 </a>
                 <div class="dropdown-menu" aria-labelledby="#navbarDropdown">
@@ -45,12 +45,12 @@ if (isset($_SESSION['Id'])) {
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="myProfile.php">My Profile</a>
+                <a class="nav-link text-dark" href="myProfile.php">My Profile</a>
               </li>
               <?php
               if (isset($_SESSION['Id'])) {
-                echo '<div class="logout text-center">
-                <a href="../backend/logout.php?logout_id='.$res['UNAME'].'" class="btn logout-btn"><i class="fas fa-sign-out-alt fa-1x text-white"></i></a></div>';
+                echo '<div class="logout">
+                <a href="../backend/logout.php?logout_id='.$res['UNAME'].'" class="btn logout-btn"><i class="fas fa-sign-out-alt fa-1x text-dark"></i></a></div>';
               }
               ?>
           </div>
@@ -88,7 +88,7 @@ if (isset($_SESSION['Id'])) {
         <h1>C</h1>
         <p class="card-text">Find your friends....Organise members into groups and share messsages regarding events and activities.</p>
         <div class="button">
-          <a href=# class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Chat</a>
+          <a href="chat.php" class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Chat</a>
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@ if (isset($_SESSION['Id'])) {
         <h1>E</h1>
         <p class="card-text">Get updated with our College events and get your hands dirty..</p>
         <div class="button">
-          <a href=# class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Events</a>
+          <a href="club-chat.php" class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Events</a>
         </div>
       </div>
     </div>
@@ -118,7 +118,7 @@ if (isset($_SESSION['Id'])) {
         <h1>G</h1>
         <p class="card-text">You can see Collection of images of College's inter and intra culturals..</p>
         <div class="button">
-          <a href=# class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Gallery</a>
+          <a href="gallery.html" class="btn text-uppercase text-white font-weight-bolder text-decoration-none">Gallery</a>
         </div>
       </div>
     </div>
@@ -136,7 +136,7 @@ if (isset($_SESSION['Id'])) {
         <!-- Section: Text -->
         <section class="mb-4">
           <p>
-            Done by: R.Rajagnanaguru, Gangaraju Tharun, A.Narendirakumar
+            Done by: 
           </p>
         </section>
         <!-- Section: Text -->

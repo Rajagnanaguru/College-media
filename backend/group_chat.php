@@ -9,15 +9,18 @@
 
     if(mysqli_num_rows($sql)>0 || (mysqli_num_rows($sql1)>0 && $row1['ADMIN_ID'] == $_SESSION['Id'])){
     $output = '
-            <div class="row chat-box-header align-items-center sticky-top m-0">
-                <span class="col-sm-2 text-center profile-img px-1">
-                    <img src="../backend/Club_profile_pics/'.$row1['PROFILE_IMAGE'].'"> 
+            <div class="row chat-box-header d-flex align-items-center sticky-top m-0">
+                <div class="col-1 back-btn text-white"><i class="fas fa-arrow-left"></i></div>
+                <span class="profile col-8 col-md-10 d-flex align-items-center">
+                    <div class="profile-img">
+                        <img src="../backend/Club_profile_pics/'.$row1['PROFILE_IMAGE'].'"> 
+                    </div>
+                    <div class="sender-name text-white px-2 px-sm-3">
+                        <div class="user_id">'.$club_id.'</div>
+                        <div class="online-status"></div>
+                    </div>
                 </span>
-                <div class="col-sm-8 sender-name text-white px-0">
-                    <div class="user_id">'.$club_id.'</div>
-                    <div class="online-status"></div>
-                </div>
-                <div class="col-sm-2 text-center unfollow-btn">
+                <div class="col-3 col-md-2 text-center unfollow-btn">
                     <button class="btn">Leave</button>
                 </div>
             </div>

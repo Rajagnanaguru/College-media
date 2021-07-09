@@ -2,16 +2,16 @@ $(document).ready(function(){
 
     //on clicking the chat-box header
     const chatBox = $(".chat-box");
-    chatBox.on("click",".chat-box-header",function(){
+    chatBox.on("click",".chat-box-header .profile-img",function(){
         const groupInfo = $(".group-info");
-        $(".chat-box .group-info").css("display","block");
         var clubName = $(".chat-box-header .user_id").text();
 
         let xhr = new XMLHttpRequest();
         xhr.open("POST","../backend/groupInfo.php?clubName="+clubName,true);
         xhr.onreadystatechange = () => {
                 let data = xhr.response;
-                 groupInfo.html(data);
+                groupInfo.html(data);
+                $(".chat-box .group-info").show("slow");
         }
         xhr.send();
     });
@@ -19,7 +19,7 @@ $(document).ready(function(){
     //on clicking the back button
     chatBox.on("click",".group-info .back-btn i",function(){
         console.log("hi");
-        $(".chat-box .group-info").css("display","none");
+        $(".chat-box .group-info").hide("fast");
     });
 
     //on clicking the request related buttons

@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //displaying the friend name if clicked
-    $(".users-list").on("click", ".frnd", function () {
+    $(".users-list").on("click", ".friends-list .frnd", function () {
         
         //variables
         var user_id = $(this).find(".user_id").text();

@@ -13,15 +13,18 @@ if (mysqli_num_rows($sql1) > 0) {
         $sql = mysqli_query($conn, "SELECT * FROM STUDENT WHERE UNAME = '{$user_id}'");
         $row = mysqli_fetch_assoc($sql);
         $output .= '
-            <div class="row chat-box-header align-items-center sticky-top m-0">
-                <span class="col-sm-2 text-center profile-img px-1">
-                    <img src="../backend/Profile_pics/' . $row['IMAGE'] . '"> 
+            <div class="row chat-box-header d-flex align-items-center sticky-top m-0">
+                <div class="col-1 back-btn text-white"><i class="fas fa-arrow-left"></i></div>
+                <span class="profile col-8 col-md-9 col-lg-10 d-flex align-items-center">
+                    <div class="profile-img">
+                        <img src="../backend/Profile_pics/' . $row['IMAGE'] . '"> 
+                    </div>
+                    <div class="sender-name text-white px-2 px-sm-3">
+                        <div class="user_id">' . $user_id . '</div>
+                        <div class="online-status"></div>
+                    </div>
                 </span>
-                <div class="col-sm-8 sender-name text-white px-0">
-                    <div class="user_id">' . $user_id . '</div>
-                    <div class="online-status"></div>
-                </div>
-                <div class="col-sm-2 text-center unfollow-btn">
+                <div class="col-3 col-md-3 col-lg-2 text-center unfollow-btn">
                     <button class="btn">Unfollow</button>
                 </div>
             </div>
@@ -37,9 +40,5 @@ if (mysqli_num_rows($sql1) > 0) {
             <h1>NOT FOLLOWING YET</h1>
         </div>';
     }
-} else {
-    $output .= '<div class="follow-info d-flex justify-content-center align-items-center h-100">
-        <h1>NOT FOLLOWING YET</h1>
-    </div>';
-}
+} 
 echo $output;
