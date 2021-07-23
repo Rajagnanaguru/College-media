@@ -20,7 +20,7 @@
                         <div class="online-status"></div>
                     </div>
                 </span>
-                <div class="col-3 col-md-2 text-center unfollow-btn">
+                <div class="col-3 col-md-2 px-3 text-center unfollow-btn">
                     <button class="btn">Leave</button>
                 </div>
             </div>

@@ -40,7 +40,7 @@ if (mysqli_num_rows($sql)) {
                     <span class="col-10 col-sm-10 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
                         <img src="../backend/Profile_pics/' . $row1['IMAGE'] . '">
                         <span class="info px-2">
-                            <span class="user_id">' . $row['REQUESTING_ID'] . '</span>
+                            <span class="user_id d-flex justify-flex-start">' . $row['REQUESTING_ID'] . '</span>
                             <div class="recent-msg">' . $msg . '</div>
                         </span>
                     </span>

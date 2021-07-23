@@ -34,22 +34,22 @@ if (mysqli_num_rows($sql)) {
         } else if (mysqli_num_rows($sql1) > 0 && $row1['MEMBER'] == 1) {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-6 col-sm-6 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                    <span class="col-7 col-sm-7 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
                         <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '">
-                        <span class="info px-0">' . $row['CLUB_ID'] . '</span>
+                        <span class="info px-2">' . $row['CLUB_ID'] . '</span>
                     </span>
-                    <div class="request col-6 col-sm-6 d-flex justify-content-end">
+                    <div class="request col-5 col-sm-5 d-flex justify-content-end">
                         <button class="btn request-btn">Requested</button>
                     </div>
                 </div>';
         } else {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-6 col-sm-6 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                    <span class="col-7 col-sm-7 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
                         <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '">
-                        <span class="info px-0">' . $row['CLUB_ID'] . '</span>
+                        <span class="info px-2">' . $row['CLUB_ID'] . '</span>
                     </span>     
-                    <div class="request col-6 col-sm-6 d-flex justify-content-end">
+                    <div class="request col-5 col-sm-5 d-flex justify-content-end">
                         <button class="btn request-btn">Request</button>
                     </div>
                 </div>';

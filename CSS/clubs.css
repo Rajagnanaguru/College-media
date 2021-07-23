@@ -391,3 +391,9 @@ body{
         z-index: 1021;
     }
 }
+
+@media only screen and (max-width:768px){
+    .sender-name .user_id{
+        font-size: 17px;
+    }
+}
