@@ -7,6 +7,7 @@ setInterval(() =>{
     xhr.onload = ()=>{
       if(xhr.readyState == 4 && xhr.status){
             let data = xhr.response;
+            console.log(data);
             other_users_list.html(data);
           }
       }

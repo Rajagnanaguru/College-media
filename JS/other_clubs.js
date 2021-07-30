@@ -7,7 +7,7 @@ setInterval(() =>{
     xhr.onload = ()=>{
       if(xhr.readyState == 4 && xhr.status){
             let data = xhr.response;
-            //console.log(data);
+            console.log(data);
             other_clubs_list.html(data);
           }
       }

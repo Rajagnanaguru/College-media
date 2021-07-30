@@ -24,9 +24,7 @@ $(document).ready(function(){
                         if(Xhr.readyState == 4 && xhr.status){
                             let data = Xhr.response;
                             chat.html(data);
-                            //console.log($(".chat-box .chats")[0].scrollHeight);
-                            //console.log(data);
-                            //scrolling the chats to the bottom
+                            //auto-scroll of chats to the bottom
                             $(".chat-box").animate({scrollTop: $(".chat-box")[0].scrollHeight},1000);
                         }
                     }

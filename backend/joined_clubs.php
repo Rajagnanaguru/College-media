@@ -22,10 +22,13 @@ if (mysqli_num_rows($sql1) > 0 || mysqli_num_rows($sql2) > 0) {
 
         $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                <span class="col-sm-2 text-center frnd-profile-pic">
-                <img src="../backend/Club_profile_pics/' . $row3['PROFILE_IMAGE'] . '" width="90%">
-                </span>
-                <span class="col-sm-10 info px-2"><span class="user_id">' . $row3['CLUB_ID'] . '</span><div class="recent-msg">' .$msg.'</div></span>
+                    <span class="col-sm-12 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Club_profile_pics/' . $row3['PROFILE_IMAGE'] . '" width="90%">
+                        <span class="info px-2">
+                            <span class="user_id d-flex justify-flex-start">' . $row3['CLUB_ID'] . '</span>
+                            <div class="recent-msg d-flex justify-flex-start">' .$msg.'</div>
+                        </span>
+                    </span>
                 </div>';
     }
 
@@ -40,10 +43,13 @@ if (mysqli_num_rows($sql1) > 0 || mysqli_num_rows($sql2) > 0) {
         }
         $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                <span class="col-sm-2 text-center frnd-profile-pic">
-                <img src="../backend/Club_profile_pics/'. $row2['PROFILE_IMAGE'] . '" width="90%">
-                </span>
-                <span class="col-sm-10 info px-2"><span class="user_id">' . $row2['CLUB_ID'] . '</span><div class="recent-msg">' .$msg.'</div></span>
+                    <span class="col-sm-12 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Club_profile_pics/'. $row2['PROFILE_IMAGE'] . '" width="90%">
+                        <span class="info px-2">
+                            <span class="user_id d-flex justify-flex-start">' . $row2['CLUB_ID'] . '</span>
+                            <div class="recent-msg d-flex justify-flex-start">' .$msg.'</div>
+                        </span>
+                    </span>
                 </div>';
     }
 } else {

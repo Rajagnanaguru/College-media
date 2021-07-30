@@ -29,42 +29,52 @@ if (!isset($_SESSION['Id'])) {
             <!---------------------left-side chat ui friends list--------------------------------->
 
 
-            <div class="clubs-list-ui col-sm-5 p-0 m-0">
-                <div class="clubs-list-header p-0 sticky-top">
-                    <div class="logo-header d-flex align-items-center p-0">
-                        <a href="index.php" class="back-btn text-center text-white"><i class="fas fa-arrow-left fa-1x"></i></a>
-                        <div class="logo">
-                        <p class="fill-text m-0"><i class="fas fa-eye"></i>TERATORS</p>
+            <div class="clubs-list-ui col-12 col-md-6 col-lg-5 p-3 m-0">
+                <div class="main-container">
+                    <div class="clubs-list-header p-0 sticky-top">
+                        <div class="logo-header p-0">
+                            <a href="index.php" class="back-btn text-center text-white"><i class="fas fa-arrow-left fa-1x"></i></a>
+                            <div class="user-name p-1">
+                                <?php
+                                echo '
+                                    <img src="../backend/Profile_pics/' . $res['IMAGE'] . '" border="2">
+                                    <div class="user_id">' . $res['UNAME'] . '</div>
+                                    ';
+                                ?>
+                            </div>
+                            <div class="logout text-center">
+                                <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn"><i class="fas fa-sign-out-alt fa-1x text-white"></i></a>
+                            </div>
                         </div>
-                        <div class="logout text-center">
-                            <a href="../backend/logout.php?logout_id=<?php echo $res['UNAME']; ?>" class="btn logout-btn"><i class="fas fa-sign-out-alt fa-1x text-white"></i></a>
+                        <!---------------------friends list search bar--------------------------------->
+
+                        <div class="search-bar input-group p-3">
+                            <input type="search" class="form-control" placeholder="Search clubs list...">
+                            <span class="input-group-text"><img src="../assets/bootstrap-icons-1.4.1/search.svg"></span>
                         </div>
-                    </div>
-                    <!---------------------friends list search bar--------------------------------->
 
-                    <div class="search-bar input-group p-3">
-                        <input type="search" class="form-control" placeholder="Search clubs list...">
-                        <span class="input-group-text"><img src="../assets/bootstrap-icons-1.4.1/search.svg"></span>
-                    </div>
+                        <!---------------------friends list search bar--------------------------------->
 
-                    <!---------------------friends list search bar--------------------------------->
+                        <div class="search-clubs-list">
+                        </div>
 
-                </div>
-
-                <div class="clubs-list">
-                    <!---------------------friends list ui--------------------------------->
-                    <div class="joined-clubs-list">
                     </div>
 
-                    <!---------------------friends list ui--------------------------------->
+                    <div class="clubs-list">
+                        <!---------------------friends list ui--------------------------------->
+                        <div class="joined-clubs-list">
+                        </div>
 
-                    <!---------------------other users list ui--------------------------------->
+                        <!---------------------friends list ui--------------------------------->
 
-                    <div class="other-clubs-list">
+                        <!---------------------other users list ui--------------------------------->
+
+                        <div class="other-clubs-list">
+                        </div>
+
+                        <!---------------------other users list ui--------------------------------->
+
                     </div>
-
-                    <!---------------------other users list ui--------------------------------->
-
                 </div>
 
 
@@ -76,16 +86,20 @@ if (!isset($_SESSION['Id'])) {
 
             <!---------------------right-side chat ui--------------------------------->
 
-            <div class="col-sm-7 chat-box p-0">
-                <div class="initial-info d-flex justify-content-center align-items-center h-100">
-                    <h1>Have a chat</h1>
+            <div class="chat-box-container col-12 col-md-6 col-lg-7 p-3">
+                <div class="chat-box p-0">
+                    <div class="initial-info d-flex justify-content-center align-items-center h-100">
+                        <img src="../assets/Images/Chat-stuff-themes/Handshake.jpg" width="50%">
+                    </div>
                 </div>
-                <!---------------------text-box--------------------------------->
-
-                <!---------------------text-box--------------------------------->
             </div>
 
             <!---------------------right-side chat ui--------------------------------->
+
+            <form method="POST" enctype="multipart/form-data" class="profile-dp" id="profile-dp" onsubmit="return false;">
+                <input type="file" name="dp" class="dp">
+            </form>
+
         </div>
     </div>
     <script type="text/javascript" src="../JS/joined_clubs.js"></script>
@@ -94,6 +108,30 @@ if (!isset($_SESSION['Id'])) {
     <script type="text/javascript" src="../JS/join_club.js"></script>
     <script type="text/javascript" src="../JS/club_search.js"></script>
     <script type="text/javascript" src="../JS/unfollow.js"></script>
+    <script type="text/javascript" src="../JS/groupInfo.js"></script>
+    <script type="text/javascript" src="../JS/changeDp.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            setInterval(() => {
+                if ($(window).width() < 768) {
+                    $(".clubs-list").on("click", ".joined-clubs-list .frnd", () => {
+                        console.log("yes");
+                        $(".clubs-list-ui").hide("fast");
+                        $(".chat-box-container").show("fast");
+                    });
+                    $(".chat-box").on("click", ".chat-box-header .back-btn", () => {
+                        $(".clubs-list-ui").show("fast");
+                        $(".chat-box-container").hide("fast");
+                    });
+
+                } else {
+                    $(".clubs-list-ui").show("fast");
+                    $(".chat-box-container").show("fast");
+                }
+            }, 500);
+
+        });
+    </script>
 </body>
 
 </html>

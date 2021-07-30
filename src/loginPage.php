@@ -18,7 +18,7 @@
     <div class="container-fluid">
 
         <!----------------Login--------------------->
-        <div class="form-container login-container">
+        <div class="form-container login-container mb-3 mb-lg-0">
             <div class="login-form m-auto align-items-center" id="login-form">
                 <form id="login" onsubmit="return false;">
                     <div class="login-logo mb-4 text-center">
@@ -57,7 +57,7 @@
         <!----------------Login--------------------->
 
         <!----------------signup--------------------->
-        <div class="form-container signup-container d-flex align-items-center">
+        <div class="form-container signup-container">
             <div class="signup-form m-auto" id="signup-form">
                 <form id="signup" onsubmit="return false;">
                     <div class="signup-logo mb-3 text-center">

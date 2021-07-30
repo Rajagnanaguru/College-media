@@ -68,9 +68,9 @@ if (!isset($_SESSION['Id'])) {
 
                 <!---------------------student academic details-------------------------->
                 <div class="academic-label">
-                <label>Course</label>
-                <label>Department</label>
-                <label>Year</label>
+                    <label>Course</label>
+                    <label>Department</label>
+                    <label>Year</label>
                 </div>
                 <div class="input-group mb-4 d-flex justify-content-center">
                     <span class="input-group-text bg-white">
@@ -86,7 +86,7 @@ if (!isset($_SESSION['Id'])) {
                     </span>
                     <input type="text" name="year" class="form-control year" placeholder="eg: 1,2" readonly>
                 </div>
-                
+
                 <label>College Name</label>
                 <div class="input-group mb-4">
                     <input type="text" name="college_name" class="form-control cname" placeholder="Your college name" readonly>

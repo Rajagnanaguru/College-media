@@ -1,6 +1,9 @@
 body{
     overflow-x: hidden;
     box-sizing: border-box;
+    background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-01.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 body::-webkit-scrollbar{
@@ -9,7 +12,6 @@ body::-webkit-scrollbar{
 
 .nav-w-slogan{
     height: 100vh;
-    background-image: url("../assets/Images/Events/home-bg.png");
     color: black!important;
     background-size: 110vw;
     background-repeat: no-repeat;
@@ -97,6 +99,7 @@ body::-webkit-scrollbar{
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 20px;
+    background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-01.jpg");
 }
 
 .Cards h1{
@@ -147,18 +150,9 @@ footer .report{
 }
 
 
-@media only screen and (max-width:600px){
-    .nav-w-slogan{
-        height: 100vh;
-        background-image: url("../assets/Images/Events/events-bg.png");
-        color: black!important;
-        background-size: 110vw;
-        background-repeat: no-repeat;
-    }
-}
 
-@media only screen and (max-width:800px){
-    
+@media only screen and (max-width:992px){
+
     .Cards{
         display: flex;
         flex-direction: column;

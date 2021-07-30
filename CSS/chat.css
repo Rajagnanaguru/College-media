@@ -1,42 +1,57 @@
 body{
-    background: blanchedalmond;
+    box-sizing: border-box;
 }
 
 .chat-ui{
+    overflow: hidden;
     height: 100vh;
 }
+
 /*****friends list header*******/
+
+.friends-list-ui .main-container{
+    border-radius: 10px;
+    box-shadow:rgba(0,0,0,.2) 0px 8px 29px 10px;
+    background-color: #fff;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.friends-list-ui .main-container::-webkit-scrollbar{
+    width: 0;
+}
+
 .friends-list-header{
     z-index: 10;
     background: linear-gradient(to bottom right,#290a59,#ff7c00);
 }
 
 .logo-header{
+    border-radius: 10px 10px 0 0;
     padding: 15px;
     height: 75px;
-    border-bottom: 2px rgba(0,0,0,.1) solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
 .logo-header a i{
     font-size: 20px;
 }
 
-.back-btn{
-    flex: 10%;
-}
-
-.logo{
-    flex: 70%;
-    font-size: 25px;    
+.user-name{
     letter-spacing: 3px;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.logout{
-    flex: 20%;
+.user-name img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;   
 }
-
 
 .search-bar{
     padding-top: 30px;
@@ -53,6 +68,14 @@ body{
 
 /*****friends list header*******/
 
+.users-list{
+    height: 100%;
+    padding-top: 10px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+}
 
 /******friends-list*****/
 
@@ -62,16 +85,9 @@ body{
 }
 
 .friends-list-ui{
-    background: linear-gradient(to top right,#290a59,#ff7c00);
     height: 100vh;
-    overflow-y: scroll;
     color: white;
 }
-
-.friends-list-ui::-webkit-scrollbar{
-    width: 0;
-}
-
 
 .frnd{  
     border-bottom: 1px rgba(0,0,0,.1) solid;
@@ -79,8 +95,8 @@ body{
 
 .frnd .frnd-profile-pic img{
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 
@@ -99,7 +115,7 @@ body{
 
 .request .btn{
     border: none;
-    border-radius: 50px;
+    border-radius: 0 10px 0px 10px;
     background: linear-gradient(to bottom right,orangered,orange);
     color: whitesmoke;
     transition: all .5s;
@@ -108,15 +124,33 @@ body{
 
 /*****other users list*****/
 
+/*****search list*****/
+
+.search-users-list{
+    width: 100%;
+    display: none;
+    overflow-y: scroll;
+    color: white;
+}
+
+.search-users-list::-webkit-scrollbar{
+    width: 0;
+}
+
+/*****search list*****/
+
 /*******Chat-box*******/
 
 .chat-box{
-    height: 100vh;
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
     overflow-x: hidden;
     overflow-y: scroll;
+    box-shadow:rgba(0,0,0,.2) 0px 8px 29px 10px;
     background-image: url("../assets/Images/Chat-stuff-themes/chat-theme-02.jpg");
+    background-position: fixed;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .chat-box::-webkit-scrollbar{
@@ -124,10 +158,9 @@ body{
 }
 
 
-.initial-info{
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 3px rgba(0,0,0,.5);
+.initial-info img{
+    border: 10px solid #804f;
+    border-radius: 50%;
 }
 
 .chats{
@@ -169,13 +202,23 @@ body{
 
 .chat-box-header{
     align-items: center;
-    background: #FF0040;
     height: 75px;
-    background: linear-gradient(to top right,#804f,#55185d );
+    background: linear-gradient(to bottom right,#804f,#6a359c);
 }
 
+.chat-box-header .back-btn{
+    display: none;
+}
 
-.profile-img img{
+.chat-box-header .back-btn i{
+    font-size: 30px;
+}
+
+.profile{
+    position: relative;
+}
+
+.profile img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -200,8 +243,8 @@ body{
 /**********text box***********/
 
 .text-bar{
-    position: fixed;
-    width: inherit;
+    position: absolute;
+    width: 100%;
     padding : 3px 8px;
     bottom: 5px;
     column-gap: 1%;
@@ -236,3 +279,35 @@ body{
     display: none;
 }
 /**********text box***********/
+
+
+@media only screen and (max-width:768px){
+    .chat-box-header .back-btn{
+        display:inline-flex
+    }
+
+    .chat-box-header .back-btn i{
+        font-size: 20px;
+    }
+
+    .sender-name .user_id{
+        font-size: 15px;
+    }
+
+    .profile img{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+
+    .chat-ui{
+        position: relative;
+    }
+
+    .chat-box-container{
+        height: 100%;
+        position: absolute;
+        display: none;
+        z-index: 1021;
+    }
+}

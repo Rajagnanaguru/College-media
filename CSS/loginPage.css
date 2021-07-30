@@ -211,18 +211,40 @@ body{
 /*******overlay*******/
 
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:992px){
+    body{
+        outline: none;
+        overflow: scroll;
+        margin: 0;
+        background-color: #f0f0f0 ;
+    }
+    
+    .container-fluid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200vh;
+    }
+
     .panel-right,.panel-left{
         display: none;
     }
 
-    .container-fluid{
-        display: grid;
-        grid-template-columns: 100%;
-        justify-content: center;
-        align-items: center;
+    .login-form{
+        transform: translateX(0);
+        
+    }
+    .signup-form{
+        transform: translateX(0);
     }
 
+    .login-container,.signup-container{
+        flex: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     
 }

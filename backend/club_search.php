@@ -2,7 +2,7 @@
 session_start();
 include_once "config.php";
 $searchTerm = $_POST['searchTerm'];
-$sql = mysqli_query($conn, "SELECT * FROM CLUBS WHERE CLUB_ID LIKE '%{$searchTerm}%'");
+$sql = mysqli_query($conn, "SELECT * FROM CLUBS WHERE CLUB_ID LIKE '{$searchTerm}%'");
 $output = "";
 if (mysqli_num_rows($sql)) {
     while ($row = mysqli_fetch_assoc($sql)) {
@@ -23,30 +23,33 @@ if (mysqli_num_rows($sql)) {
         if (mysqli_num_rows($sql2) > 0 || (mysqli_num_rows($sql1) > 0 && $row1['MEMBER'] == 2)) {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                <span class="col-sm-2 text-center frnd-profile-pic">
-                <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '" width="90%">
-                </span>
-                <span class="col-sm-10 info px-2"><span class="user_id">' . $row['CLUB_ID'] . '</span><div class="recent-msg">' .$msg.'</div></span>
+                    <span class="col-12 col-sm-12 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '">
+                        <span class="info px-2">
+                            <span class="user_id d-flex justify-flex-start">' . $row['CLUB_ID'] . '</span>
+                            <div class="recent-msg  d-flex justify-flex-start">' .$msg.'</div>
+                        </span>
+                    </span>
                 </div>';
         } else if (mysqli_num_rows($sql1) > 0 && $row1['MEMBER'] == 1) {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '"width="90%">
+                    <span class="col-7 col-sm-7 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '">
+                        <span class="info px-2">' . $row['CLUB_ID'] . '</span>
                     </span>
-                    <span class="col-sm-4 info px-0">' . $row['CLUB_ID'] . '</span>
-                    <div class="request col-sm-6 d-flex justify-content-end">
+                    <div class="request col-5 col-sm-5 d-flex justify-content-end">
                         <button class="btn request-btn">Requested</button>
                     </div>
                 </div>';
         } else {
             $output .= '
                 <div class="row frnd p-3 m-0 d-flex align-items-center">
-                    <span class="col-sm-2 text-center frnd-profile-pic">
-                        <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '"width="90%">
-                    </span>
-                    <span class="col-sm-4 info px-0">' . $row['CLUB_ID'] . '</span>
-                    <div class="request col-sm-6 d-flex justify-content-end">
+                    <span class="col-7 col-sm-7 text-center frnd-profile-pic d-flex justify-flex-start align-items-center">
+                        <img src="../backend/Club_profile_pics/' . $row['PROFILE_IMAGE'] . '">
+                        <span class="info px-2">' . $row['CLUB_ID'] . '</span>
+                    </span>     
+                    <div class="request col-5 col-sm-5 d-flex justify-content-end">
                         <button class="btn request-btn">Request</button>
                     </div>
                 </div>';

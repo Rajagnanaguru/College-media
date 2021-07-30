@@ -1,7 +1,7 @@
 $(document).ready(function(){    
     //const btn = $(".other-users-list .request-btn");
     $('.other-clubs-list').on('click',".request-btn",function(){
-        var uname = $(this).parents(".frnd").children(".info").text();
+        var uname = $(this).parents(".frnd").find(".info").text();
         var btnValue  = $(this).text();
         console.log(btnValue);
         let xhr = new XMLHttpRequest();
