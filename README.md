@@ -1,10 +1,11 @@
-# College media
+# COLLEGE MEDIA
 
 ## DBMS Project
 
 ## Chatting application
 
 ### Iterators
-### Naren
-### THARUN
+### Rajagnanaguru R
+### Narendira Kumar A
+### Gangaraju Tharun
 
